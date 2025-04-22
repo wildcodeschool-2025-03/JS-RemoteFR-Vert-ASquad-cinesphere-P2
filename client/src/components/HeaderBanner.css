@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner-img {
+    position: relative;
+    width: 100vw;
+    height: 35vh;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-img div {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh;
+}
+
+.banner-title {
+    font-size: 4vh;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .banner-img {
+        height: 50vh;
+    }
+
+    .banner-img div {
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 10vh;
+    }
+
+    .banner-title {
+        font-size: 6vh;
+        margin-top: 0;
+        text-align: left;
+        align-self: flex-start;
+    }
+}
