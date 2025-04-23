@@ -12,7 +12,7 @@ const HeaderBanner: FC<HeaderBannerProps> = ({
 }) => {
   return (
     <div className="banner-img">
-      <img src={imgSrc} alt="Banner background" />
+      <img src={imgSrc} alt="Banner Film" />
       <div>
         <h1 className="banner-title">{title}</h1>
       </div>
