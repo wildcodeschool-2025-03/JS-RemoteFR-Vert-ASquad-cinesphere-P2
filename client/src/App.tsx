@@ -3,10 +3,15 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <div className="App">
+      <header> </header>
+
+      <main>
+        <HomePage />
+      </main>
+
+      <footer> </footer>
+    </div>
   );
 }
-
 export default App;
