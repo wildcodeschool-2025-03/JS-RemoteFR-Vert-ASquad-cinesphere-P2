@@ -1,6 +1,10 @@
 // Import necessary modules from React and React Router
+import React from "react";
+import "./App.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
 /* ************************************************************************* */
@@ -35,13 +39,6 @@ if (rootElement == null) {
   throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
 }
 
-// Render the app inside the root element
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>
-);
-
 /**
  * Helpful Notes:
  *
@@ -66,3 +63,11 @@ createRoot(rootElement).render(
  *    You can create routes that take parameters (e.g., /users/:id).
  *    Documentation: https://reactrouter.com/en/main/start/tutorial#url-params-in-loaders
  */
+
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);
