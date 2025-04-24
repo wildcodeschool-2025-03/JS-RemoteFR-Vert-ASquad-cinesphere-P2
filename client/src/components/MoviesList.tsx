@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
-/* détermination des types */
 interface movie {
   id: number;
   title: string;
@@ -21,8 +20,7 @@ function MoviesList() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: "Bearer ${ process.env.REACT_AP_SWIPER }",
-
+        Authorization: "Bearer ${ import.meta.env.VITE_TOKEN_API_SWIPER}",
       },
     };
 
@@ -44,7 +42,6 @@ function MoviesList() {
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
-
           768: { slidesPerView: 3, spaceBetween: 20 },
           1080: { slidesPerView: 4, spaceBetween: 20 },
         }}
