@@ -3,12 +3,11 @@ import "./App.css";
 import "./Style/UpComing.css";
 
 function App() {
-  console.log("Page d'acceuil");
+
   return (
     <>
-      <main>
-        <HomePage />
-      </main>
+      <HomePage />
+
     </>
   );
 }
