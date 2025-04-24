@@ -11,12 +11,10 @@ const HeaderBanner: FC<HeaderBannerProps> = ({
   title = "LA RÉPARATION",
 }) => {
   return (
-    <div className="banner-img">
-      <img src={imgSrc} alt="Banner Film" />
-      <div>
-        <h1 className="banner-title">{title}</h1>
-      </div>
-    </div>
+    <>
+      <img className="banner-img" src={imgSrc} alt="Banner Film" />
+      <h1 className="banner-title">{title}</h1>
+    </>
   );
 };
 

@@ -1,13 +1,15 @@
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import "./Style/UpComing.css";
+import { Outlet } from "react-router";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <main>
-        <HomePage />
+        <Outlet />
       </main>
-    </div>
+    </>
   );
 }
+
 export default App;
