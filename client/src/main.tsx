@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import HomePage from "./pages/HomePage";
 
-
 /* ************************************************************************* */
 
 // Import the main app component
@@ -47,7 +46,7 @@ if (rootElement == null) {
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
 
 /**
