@@ -21,11 +21,11 @@ function MoviesList() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`, // ← CORRECT ici
       },
     };
 
-    fetch("https://api.themoviedb.org/3/movie/top_rated", options)
+    fetch("https://api.themoviedb.org/3/movie/upcoming?language=fr-FR", options)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results || []);
