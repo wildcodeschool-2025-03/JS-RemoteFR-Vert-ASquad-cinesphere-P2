@@ -1,6 +1,6 @@
 import "./styles/MainTopCardList.css";
 import { Outlet } from "react-router";
-import "./styles/UpComing.css"
+import "./styles/UpComing.css";
 
 function App() {
   return (
