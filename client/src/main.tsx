@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 /* ************************************************************************* */
 
 // Import the main app component
+
 import App from "./App";
 import HomePage from "./pages/HomePage";
 

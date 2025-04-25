@@ -1,13 +1,11 @@
-import "./App.css";
-import "./Style/UpComing.css";
+import "./styles/MainTopCardList.css";
 import { Outlet } from "react-router";
+import "./styles/UpComing.css"
 
 function App() {
   return (
     <>
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
     </>
   );
 }

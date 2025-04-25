@@ -1,6 +1,7 @@
 /* Bloc "Sorties Récentes */
 .upcomingBloc {
   text-align: center;
+  margin-top: 1em;
 }
 
 /* Titre du bloc "Sorties Récentes */
@@ -11,6 +12,7 @@ h2 {
   color: white;
   padding: 1em 0em;
   font-size: 20px;
+  margin-bottom: 2em;
 
   @media (min-width: 768px) {
     /*fond jaune h3 */
@@ -24,8 +26,8 @@ h2 {
 
 /* Image du caroussel */
 .roundedImage {
-  width: 8em;
-  height: 13em;
+  width: 10em;
+  height: 15em;
   object-fit: cover;
   display: block;
   margin-left: auto;
@@ -40,7 +42,8 @@ h3 {
   text-align: center;
   width: 100%;
   height: 100%;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
+
 }
 
 /* Bouton "ajouter aux favoris */

@@ -11,10 +11,15 @@ interface movie {
   poster_path: string;
 }
 
+
+
 function MoviesList() {
   const [movies, setMovies] = useState<movie[]>([]);
   const apiImage = "https://image.tmdb.org/t/p/w200";
   const token = import.meta.env.VITE_TOKEN_API;
+  const [liked, setLiked] = useState(false);
+  const toggleLike = () => setLiked(!liked);
+
 
   useEffect(() => {
     const options = {
@@ -57,8 +62,8 @@ function MoviesList() {
             <div className="favoriteBlock">
               {" "}
               <h3>
-                <button type="button" className=" buttonFavorite">
-                  ★
+                <button type="button" onClick={toggleLike}>
+                  {liked ? "❤️" : "🤍"}
                 </button>
                 {movie.title}
               </h3>
