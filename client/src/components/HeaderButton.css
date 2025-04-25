@@ -1,0 +1,36 @@
+.header-button {
+  display: flex;
+  margin: 0 auto;
+  background-color: #c00f0c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 20vh;
+  left: 11vh;
+}
+
+.header-button:hover {
+  background-color: #a00d0a;
+}
+
+.header-button:active {
+  background-color: #800b08;
+  transform: translateY(1px);
+}
+
+@media (min-width: 768px) {
+  .header-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    top: 30vh;
+    left: 20vh;
+  }
+}
