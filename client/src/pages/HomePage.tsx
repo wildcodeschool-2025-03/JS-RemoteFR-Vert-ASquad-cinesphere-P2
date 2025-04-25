@@ -7,11 +7,11 @@ import MainTopCardList from "../components/MainTopCardList";
 function HomePage() {
   return (
     <div>
-        <Footer />
-        <HeaderButton />
-        <HeaderBanner />
-        <MainTopCardList />
-        <MainBottom />
+      <Footer />
+      <HeaderButton />
+      <HeaderBanner />
+      <MainTopCardList />
+      <MainBottom />
     </div>
   );
 }
