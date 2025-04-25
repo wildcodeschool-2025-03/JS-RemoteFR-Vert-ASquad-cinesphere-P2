@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import "./styles/UpComing.css";
 
 function App() {
   return (
