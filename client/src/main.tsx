@@ -9,8 +9,8 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 // Import the main app component
 
 import App from "./App";
-import Accueil from "./pages/Accueil";
 import Evenements from "./pages/Evenements";
+import HomePage from "./pages/HomePage";
 import Offres from "./pages/Offres";
 import Panier from "./pages/Panier";
 import Selection from "./pages/Selection";
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Accueil />, // Renders the App component for the home page
+        element: <HomePage />, // Renders the App component for the home page
       },
       {
         path: "/Evenements",

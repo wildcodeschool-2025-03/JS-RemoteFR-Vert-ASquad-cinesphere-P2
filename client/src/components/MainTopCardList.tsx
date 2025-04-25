@@ -39,7 +39,7 @@ function MainTopCardList() {
       })
       .catch((err) => console.error(err));
   }, []);
-
+  console.log(movies);
   return (
     <div>
       <div className="cardBox">

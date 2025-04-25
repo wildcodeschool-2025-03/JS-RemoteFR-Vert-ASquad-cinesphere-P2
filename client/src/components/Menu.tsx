@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../style/Menu.css";
+import "../styles/Menu.css";
 
 type Props = {
   //un true ou false pour savoir si le menu est ouvert
