@@ -23,14 +23,15 @@ import HomePage from "./pages/HomePage";
 const router = createBrowserRouter([
   {
     path: "/", // The root path
-    element: <App />,
+    element: <App />, // Renders the App component for the home page
     children: [
       {
         path: "",
-        element: <HomePage />, // Renders the App component for the home page
+        element: <HomePage />,
       },
     ],
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 

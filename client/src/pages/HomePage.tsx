@@ -1,10 +1,13 @@
+import HeaderButton from "../components/HeaderButton";
+import MainBottom from "../components/MainBottom";
 import MainTopCardList from "../components/MainTopCardList";
-
 function HomePage() {
   return (
-    <div>
+    <>
       <MainTopCardList />
-    </div>
+      <HeaderButton />
+      <MainBottom /> {/* 2ème partie du main */}
+    </>
   );
 }
 
