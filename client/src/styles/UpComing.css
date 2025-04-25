@@ -1,0 +1,64 @@
+/* Bloc "Sorties Récentes */
+.upcomingBloc {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* Titre du bloc "Sorties Récentes */
+
+h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: white;
+  padding: 1em 0em;
+  font-size: 20px;
+  margin-bottom: 2em;
+
+  @media (min-width: 768px) {
+    /*fond jaune h3 */
+    background-color: #ffc219;
+    padding: 4px 8px;
+    display: inline-block;
+
+    color: black;
+  }
+}
+
+/* Image du caroussel */
+.roundedImage {
+  width: 10em;
+  height: 15em;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Titre des films */
+h3 {
+  color: white;
+  font-size: 14px;
+  margin-top: 1em;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1em;
+}
+
+/* Bouton "ajouter aux favoris */
+.buttonFavorite {
+  color: red;
+  border: none;
+  margin-right: 0.2em;
+}
+
+/* Bouton précédant et suivant du caroussel */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+/* couleur pointeur Barre de swipe */
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
