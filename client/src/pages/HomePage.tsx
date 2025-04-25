@@ -5,7 +5,7 @@ function HomePage() {
     <div>
       <MainTopCardList />
     </div>
-  )
+  );
 }
 
 export default HomePage;
