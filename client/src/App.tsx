@@ -1,4 +1,3 @@
-
 import "./App.css";
 import "./styles/MainTopCardList.css";
 import { Outlet } from "react-router";
