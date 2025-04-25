@@ -13,7 +13,6 @@ const Navbar = () => {
   // Afficher ou cacher le menu burger
   const [open, setOpen] = useState(false);
 
-
   return (
     <>
       {/*Menu Deroulant*/}
@@ -91,5 +90,4 @@ const Navbar = () => {
   );
 };
 
-console.log("navbar rendu")
 export default Navbar;

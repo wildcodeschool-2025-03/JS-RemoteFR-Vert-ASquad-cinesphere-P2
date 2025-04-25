@@ -1,7 +1,5 @@
-import React from "react";
-
 function Offres() {
-  return <div></div>;
+  return <div />;
 }
 
 export default Offres;
