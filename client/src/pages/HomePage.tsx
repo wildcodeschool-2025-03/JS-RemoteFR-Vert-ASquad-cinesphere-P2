@@ -1,10 +1,10 @@
-import HeaderButton from "../components/HeaderButton";
+import MainTopCardList from "../components/MainTopCardList";
 
 function HomePage() {
   return (
-    <>
-      <HeaderButton />
-    </>
+    <div>
+      <MainTopCardList />
+    </div>
   );
 }
 
