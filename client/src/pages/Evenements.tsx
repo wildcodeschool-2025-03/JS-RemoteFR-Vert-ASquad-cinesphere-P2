@@ -1,13 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
-const Evenements = () => {
-  return (
-    <div>
-      <Navbar />
-      <h1>Evenement</h1>
-    </div>
-  );
-};
+function Evenements() {
+  return <div></div>;
+}
 
 export default Evenements;

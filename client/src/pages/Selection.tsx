@@ -1,13 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
-const Selection = () => {
-  return (
-    <div>
-      <Navbar />
-      <h1>Selection</h1>
-    </div>
-  );
-};
+function Selection() {
+  return <div></div>;
+}
 
 export default Selection;

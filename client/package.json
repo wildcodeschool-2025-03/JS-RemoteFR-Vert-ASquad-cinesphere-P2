@@ -6,7 +6,8 @@
     "dev": "vite --host",
     "build": "tsc && vite build",
     "start": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "biome:fix": "npx biome check --fix --unsafe"
   },
   "dependencies": {
     "ionicons": "^7.4.0",

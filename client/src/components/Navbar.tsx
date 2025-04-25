@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/Navbar.css";
 import { Search, ShoppingCart } from "lucide-react";
@@ -13,26 +13,6 @@ const Navbar = () => {
   // Afficher ou cacher le menu burger
   const [open, setOpen] = useState(false);
 
-  // Detecter le clic en dehors
-  const menuRef = useRef(null);
-
-  // Ferme le menu si on cllique en dehors de la navabr
-  useEffect(() => {
-    function handleClick(event: MouseEvent) {
-      // Si on clique dans la navbar on fait rien
-      if (!menuRef.current || menuRef.current.contains(event.target)) return;
-      // Sinon on ferme le menu
-      setOpen(false);
-    }
-
-    // Ecoute les clique sur la page
-    document.addEventListener("mousedown", handleClick);
-
-    // Quand le composant est retirer ca arrete d'ecouter
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, []); // Pour exécuter le code une seul fois au chargement
 
   return (
     <>
@@ -40,7 +20,7 @@ const Navbar = () => {
       <Menu open={open} setOpen={setOpen} />
 
       {/*NavBar*/}
-      <div className="navbar" ref={menuRef}>
+      <div className="navbar">
         {/*Bouton burger pour ouvrir et fermer le menu*/}
         <div className="burger">
           <Burger open={open} setOpen={setOpen} />
@@ -90,7 +70,6 @@ const Navbar = () => {
             className="modal-content"
             onClick={(e) => e.stopPropagation()}
             onKeyDown={(e) => e.stopPropagation()}
-            tabIndex={-1}
           >
             <button
               type="button"
@@ -112,4 +91,5 @@ const Navbar = () => {
   );
 };
 
+console.log("navbar rendu")
 export default Navbar;

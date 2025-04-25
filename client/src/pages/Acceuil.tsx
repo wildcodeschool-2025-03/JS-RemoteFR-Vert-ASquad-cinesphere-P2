@@ -1,13 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
-const Acceuil = () => {
-  return (
-    <div>
-      <Navbar />
-      <h1>ACCEUIL</h1>
-    </div>
-  );
-};
+function Acceuil() {
+  return <div></div>;
+}
 
 export default Acceuil;
