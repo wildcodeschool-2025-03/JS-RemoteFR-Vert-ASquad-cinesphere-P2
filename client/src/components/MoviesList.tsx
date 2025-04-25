@@ -14,17 +14,18 @@ interface movie {
 function MoviesList() {
   const [movies, setMovies] = useState<movie[]>([]);
   const apiImage = "https://image.tmdb.org/t/p/w200";
+  const token = import.meta.env.VITE_TOKEN_API;
 
   useEffect(() => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: "Bearer ${ import.meta.env.VITE_TOKEN_API_SWIPER}",
+        Authorization: `Bearer ${token}`,
       },
     };
 
-    fetch("https://api.themoviedb.org/3/movie/upcoming?language=fr-FR", options)
+    fetch("https://api.themoviedb.org/3/movie/top_rated", options)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results || []);
