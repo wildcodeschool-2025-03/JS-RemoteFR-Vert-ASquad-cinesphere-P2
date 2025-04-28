@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
+
 interface movie {
   id: number;
   title: string;
@@ -34,8 +35,11 @@ function MoviesList() {
       })
       .catch((err) => console.error(err));
   }, []);
+  console.log(movies)
 
   return (
+
+
     <div className="upcomingBloc">
       <h2> Sorties Récentes </h2>{" "}
       <Swiper
@@ -52,17 +56,18 @@ function MoviesList() {
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <img
-              src={`${apiImage}${movie.poster_path}`}
+              src={`${apiImage}${movie.poster_path}$`}
               alt={movie.title}
               className="roundedImage"
             />
             <div className="favoriteBlock">
               {" "}
               <h3>
+
                 <button type="button" onClick={toggleLike}>
                   {liked ? "❤️" : "🤍"}
                 </button>
-                {movie.title}
+
               </h3>
             </div>
           </SwiperSlide>

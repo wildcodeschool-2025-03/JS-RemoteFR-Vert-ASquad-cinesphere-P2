@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 import App from "./App";
 import HomePage from "./pages/HomePage";
+import ReservationPage from "./pages/ReservationPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
         path: "",
         element: <HomePage />,
       },
+      {
+        path: "/Reservation",
+        element: <ReservationPage />,
+      },
+
     ],
   },
 
