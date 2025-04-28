@@ -53,16 +53,17 @@ function MoviesList() {
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <img
-              src={`${apiImage}${movie.poster_path}$`}
+              src={`${apiImage}${movie.poster_path}`}
               alt={movie.title}
               className="roundedImage"
             />
             <div className="favoriteBlock">
-              {" "}
+
               <h3>
                 <button type="button" onClick={toggleLike}>
                   {liked ? "❤️" : "🤍"}
                 </button>
+                {movie.title}
               </h3>
             </div>
           </SwiperSlide>
