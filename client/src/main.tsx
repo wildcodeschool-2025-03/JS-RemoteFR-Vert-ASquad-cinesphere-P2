@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 /* ************************************************************************* */
 
 // Import the main app component
+
 import App from "./App";
 
 // Import additional components for new routes
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       },
     ], // Renders the App component for the home page
   },
+
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
