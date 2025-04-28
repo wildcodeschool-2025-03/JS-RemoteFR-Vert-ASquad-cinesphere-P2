@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
-
 interface movie {
   id: number;
   title: string;
@@ -35,11 +34,9 @@ function MoviesList() {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies)
+  console.log(movies);
 
   return (
-
-
     <div className="upcomingBloc">
       <h2> Sorties Récentes </h2>{" "}
       <Swiper
@@ -63,11 +60,9 @@ function MoviesList() {
             <div className="favoriteBlock">
               {" "}
               <h3>
-
                 <button type="button" onClick={toggleLike}>
                   {liked ? "❤️" : "🤍"}
                 </button>
-
               </h3>
             </div>
           </SwiperSlide>

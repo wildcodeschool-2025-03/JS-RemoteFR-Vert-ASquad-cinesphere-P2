@@ -1,136 +1,129 @@
 /*Image du film */
 .movieImage {
-    width: fit-content;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 1em;
+  width: fit-content;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1em;
 
-    @media (min-width: 768px) {
-        height: auto;
-        object-fit: cover;
-    }
+  @media (min-width: 768px) {
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 /* Bloc de la page réservation */
 .movieBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-
-    }
+    flex-wrap: wrap;
+  }
 }
 
 .h3Movies {
+  font-size: 14px;
+  background-color: #ffc219;
 
-    font-size: 14px;
-    background-color: #ffc219;
+  @media (min-width: 768px) {
+    /*fond jaune h3 */
 
-    @media (min-width: 768px) {
-        /*fond jaune h3 */
-
-        padding: 4px 8px;
-        display: inline-block;
-        width: 25%;
-        color: black;
-        font-size: medium;
-    }
+    padding: 4px 8px;
+    display: inline-block;
+    width: 25%;
+    color: black;
+    font-size: medium;
+  }
 }
 
 /* Bloc synopsis et des horaires */
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 94%;
+
+  @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 94%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-    @media (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    @media (min-width: 992px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
-
 
 /* synopsis */
 .overviewReservation {
+  color: white;
+  text-align: justify;
+  font-size: 12px;
+  width: 90%;
+  margin-bottom: 1em;
 
-    color: white;
-    text-align: justify;
-    font-size: 12px;
-    width: 90%;
-    margin-bottom: 1em;
-
-    @media (min-width: 768px) {
-        width: 60%
-    }
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 }
 
 /* Bloc boutons des heures des séances */
 .hoursReservation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
 
+  @media (min-width: 768px) and (max-width: 1080px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 1em;
+    justify-content: space-between;
+    width: 27%;
+  }
 
-    @media (min-width: 768px) and (max-width:1080px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 27%;
-    }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 20%;
+  }
 
-    @media (min-width:1024px) and (max-width:1280px) {
-        width: 20%;
-    }
-
-    @media (min-width:1280px) and (max-width:2000px) {
-        width: 16%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+  @media (min-width: 1280px) and (max-width: 2000px) {
+    width: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 /* boutons des heures des séances */
 .hoursButton {
-    background-color: white;
-    border: solid white;
-    text-shadow: none;
-    text-align: center;
-    border-radius: 7px;
-    padding: 10px 12px;
-    margin: 10px 4px;
-
+  background-color: white;
+  border: solid white;
+  text-shadow: none;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px 12px;
+  margin: 10px 4px;
 }
 
 .hoursButton:hover {
-    background-color: #ffc219;
-    border: #ffc219;
+  background-color: #ffc219;
+  border: #ffc219;
 }
 
 /* bouton ajouter au panier */
 .caddiesButton {
+  background-color: red;
+  border: solid;
+  border-radius: 15px;
+  padding: 7px 45px;
+  margin: 10px 4px;
 
-    background-color: red;
-    border: solid;
-    border-radius: 15px;
-    padding: 7px 45px;
+  @media (min-width: 768px) {
+    padding: 10px 80px;
     margin: 10px 4px;
-
-    @media (min-width: 768px) {
-        padding: 10px 80px;
-        margin: 10px 4px
-    }
+  }
 }

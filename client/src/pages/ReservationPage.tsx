@@ -1,12 +1,11 @@
 import MainReservation from "../components/MainReservation";
 
-
 function ReservationPage() {
-    return (
-        <>
-            <MainReservation />
-        </>
-    );
+  return (
+    <>
+      <MainReservation />
+    </>
+  );
 }
 
 export default ReservationPage;
