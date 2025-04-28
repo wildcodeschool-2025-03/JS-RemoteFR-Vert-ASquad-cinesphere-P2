@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Navbar from "./components/Navbar";
+import "./App.css";
 import "./styles/MainTopCardList.css";
 import "./styles/UpComing.css";
 import "./styles/Navbar.css";
