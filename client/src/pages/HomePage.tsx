@@ -1,14 +1,18 @@
 import HeaderButton from "../components/HeaderButton";
+import HeaderBanner from "../components/HeaderButton";
 import MainBottom from "../components/MainBottom";
 import MainTopCardList from "../components/MainTopCardList";
 
 function HomePage() {
   return (
-    <>
-      <MainTopCardList />
-      <HeaderButton />
-      <MainBottom /> {/* 2ème partie du main */}
-    </>
+    <div>
+      <main>
+        <HeaderButton />
+        <HeaderBanner />
+        <MainTopCardList />
+        <MainBottom />
+      </main>
+    </div>
   );
 }
 
