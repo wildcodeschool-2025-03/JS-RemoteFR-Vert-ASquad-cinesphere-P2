@@ -1,3 +1,4 @@
+import BannerOffer from "../components/BannerOffer";
 import Footer from "../components/Footer";
 import HeaderButton from "../components/HeaderButton";
 import HeaderBanner from "../components/HeaderButton";
@@ -7,6 +8,7 @@ import MainTopCardList from "../components/MainTopCardList";
 function HomePage() {
   return (
     <div>
+      <BannerOffer />
       <Footer />
       <HeaderButton />
       <HeaderBanner />

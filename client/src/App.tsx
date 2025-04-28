@@ -1,12 +1,14 @@
+import "./App.css";
+import BannerOffer from "./components/BannerOffer";
+import "./styles/MainTopCardList.css";
 import { Outlet } from "react-router";
 import "./styles/UpComing.css";
-import "./App.css";
-import "./styles/MainTopCardList.css";
 
 function App() {
   return (
     <>
       <Outlet />
+      <BannerOffer />
     </>
   );
 }
