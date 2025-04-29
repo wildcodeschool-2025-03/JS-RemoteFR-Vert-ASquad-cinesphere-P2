@@ -19,7 +19,7 @@ function MainReservation() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${token}`, // ← CORRECT ici
+        Authorization: `Bearer ${token}`,
       },
     };
 
@@ -33,7 +33,6 @@ function MainReservation() {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
 
   return (
     <div className="movieBanner">
