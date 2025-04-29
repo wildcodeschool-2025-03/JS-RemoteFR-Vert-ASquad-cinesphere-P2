@@ -34,12 +34,10 @@ function MainTopCardList() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results); // affiche la liste des films populaires
         setMovies(data.results);
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
   return (
     <div>
       <div className="cardBox">
