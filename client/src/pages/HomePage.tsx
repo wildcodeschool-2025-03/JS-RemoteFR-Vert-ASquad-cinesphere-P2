@@ -6,12 +6,10 @@ import MainTopCardList from "../components/MainTopCardList";
 function HomePage() {
   return (
     <div>
-      <main>
-        <HeaderButton />
-        <HeaderBanner />
-        <MainTopCardList />
-        <MainBottom />
-      </main>
+      <HeaderButton />
+      <HeaderBanner />
+      <MainTopCardList />
+      <MainBottom />
     </div>
   );
 }

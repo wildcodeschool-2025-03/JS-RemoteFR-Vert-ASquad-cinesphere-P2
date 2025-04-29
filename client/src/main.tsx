@@ -28,7 +28,7 @@ import Selection from "./pages/Selection";
 const router = createBrowserRouter([
   {
     path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    element: <App />,
     children: [
       {
         path: "",
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         path: "/Selection",
         element: <Selection />,
       },
-    ],
+    ], // Renders the App component for the home page
   },
 
   // Try adding a new route! For example, "/about" with an About component
