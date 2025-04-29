@@ -62,7 +62,6 @@
 
 button {
   all: unset;
-  text-shadow: 0 0 5px red;
   padding-right: 10px;
   cursor: pointer;
 }
