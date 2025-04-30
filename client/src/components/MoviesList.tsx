@@ -57,7 +57,6 @@ function MoviesList() {
               className="roundedImage"
             />
             <div className="favoriteBlock">
-              {" "}
               <h3>
                 <button type="button" onClick={toggleLike}>
                   {liked ? "❤️" : "🤍"}

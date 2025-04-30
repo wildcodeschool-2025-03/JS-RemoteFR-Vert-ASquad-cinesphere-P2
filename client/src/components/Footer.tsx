@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import "../assets/styles/Footer.css";
+import "../assets/styles/footer.css";
 
 type SocialLink = {
   id: string;

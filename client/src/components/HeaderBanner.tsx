@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import "./HeaderBanner.css";
+import "../assets/styles/HeaderBanner.css";
 
 type HeaderBannerProps = {
   imgSrc?: string;

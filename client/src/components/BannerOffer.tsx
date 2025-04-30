@@ -1,4 +1,4 @@
-import "../styles/BannerOffer.css";
+import "../assets/styles/BannerOffer.css";
 
 function BannerOffer() {
   return (
