@@ -1,0 +1,52 @@
+/* Style principal du menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  transition: left 0.4s ease;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Menu quand il est oubvert */
+.menu.open {
+  z-index: 1100;
+  background-color: white;
+  left: 0;
+}
+
+/* Bouton pour fermer */
+.menu .button {
+  align-self: flex-end;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Liste des liens a la vertical */
+.menu ul {
+  background-color: white;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Style des liens */
+.liens a {
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.liens li {
+  background-color: white;
+}
