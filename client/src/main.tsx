@@ -13,6 +13,7 @@ import Evenements from "./pages/Evenements";
 import HomePage from "./pages/HomePage";
 import Offres from "./pages/Offres";
 import Panier from "./pages/Panier";
+import ReservationPage from "./pages/ReservationPage";
 import Selection from "./pages/Selection";
 
 // Import additional components for new routes
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <HomePage />, // Renders the App component for the home page
+      },
+      {
+        path: "/Reservation",
+        element: <ReservationPage />,
       },
       {
         path: "/Evenements",

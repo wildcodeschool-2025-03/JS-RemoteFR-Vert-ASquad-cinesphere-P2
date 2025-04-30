@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css";
+import "../assets/styles/Navbar.css";
 import { Search, ShoppingCart } from "lucide-react";
 import logo from "../assets/images/cinesphere-logo-simple_1.png";
 import Burger from "./Burger";

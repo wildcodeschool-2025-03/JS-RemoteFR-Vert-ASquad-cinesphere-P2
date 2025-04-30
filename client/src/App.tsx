@@ -1,18 +1,20 @@
 import { Outlet } from "react-router";
-import Navbar from "./components/Navbar";
 import "./App.css";
+import "./assets/styles/MainTopCardList.css";
+import "./assets/styles/UpComing.css";
+import "./assets/styles/Navbar.css";
+import "./assets/styles/Burger.css";
+import "./assets/styles/Menu.css";
 import BannerOffer from "./components/BannerOffer";
-import "./styles/MainTopCardList.css";
-import "./styles/UpComing.css";
-import "./styles/Navbar.css";
-import "./styles/Burger.css";
-import "./styles/Menu.css";
 import Footer from "./components/Footer";
+import HeaderBanner from "./components/HeaderBanner";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <Navbar />
+      <HeaderBanner />
       <Outlet />
       <BannerOffer />
       <Footer />

@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/MainTopCardList.css";
+import "../assets/styles/MainTopCardList.css";
 
 type Movie = {
   id: number;
@@ -34,12 +34,10 @@ function MainTopCardList() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results); // affiche la liste des films populaires
         setMovies(data.results);
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
   return (
     <div>
       <div className="cardBox">

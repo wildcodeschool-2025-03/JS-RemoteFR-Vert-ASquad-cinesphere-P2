@@ -1,5 +1,4 @@
-import HeaderBanner from "../components/HeaderBanner";
-import "../styles/Evenments.css";
+import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
 
 type Movie = {
@@ -28,7 +27,6 @@ function Evenements() {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results); // affiche la liste des films populaires
         setMovies(data.results);
       })
       .catch((err) => console.error(err));
@@ -36,10 +34,9 @@ function Evenements() {
 
   return (
     <>
-      <HeaderBanner />
-      <div className="main">
+      <div className="">
         <h2>AVANT PREMIERES</h2>
-        <div className="movie-grid">
+        <div className="movie">
           {movies.slice(0, 4).map((movie) => (
             <div key={movie.id} className="movie-card">
               <img
@@ -49,7 +46,7 @@ function Evenements() {
               <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>{movie.release_date}</p>
-                <button type="button" className="movie-btn">
+                <button type="button" className="film-btn">
                   20H00
                 </button>
               </div>

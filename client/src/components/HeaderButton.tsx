@@ -1,4 +1,4 @@
-import "./HeaderButton.css";
+import "../assets/styles/HeaderButton.css";
 
 type HeaderButtonProps = {
   onClick?: () => void;
