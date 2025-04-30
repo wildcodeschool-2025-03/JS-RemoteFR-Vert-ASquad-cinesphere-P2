@@ -5,7 +5,6 @@ import "./assets/styles/MainTopCardList.css";
 import "./assets/styles/UpComing.css";
 import Footer from "./components/Footer";
 import HeaderBanner from "./components/HeaderBanner";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (
