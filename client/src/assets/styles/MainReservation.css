@@ -107,6 +107,7 @@
   border-radius: 7px;
   padding: 10px 12px;
   margin: 10px 4px;
+  color: black;
 }
 
 .hoursButton:hover {
@@ -117,13 +118,11 @@
 /* bouton ajouter au panier */
 .caddiesButton {
   background-color: red;
-  border: solid;
   border-radius: 15px;
   padding: 7px 45px;
-  margin: 10px 4px;
+  margin: 10px 4px 20px;
 
   @media (min-width: 768px) {
     padding: 10px 80px;
-    margin: 10px 4px;
   }
 }

@@ -5,7 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/MainTopCardList.css";
+import "../assets/styles/MainTopCardList.css";
 
 type Movie = {
   id: number;

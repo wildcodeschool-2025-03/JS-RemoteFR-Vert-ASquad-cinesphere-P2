@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../styles/MainReservation.css";
+import "../assets/styles/MainReservation.css";
 import MediaQuery from "react-responsive";
 
 interface movie {
@@ -7,6 +7,7 @@ interface movie {
   title: string;
   poster_path: string;
   overview: string;
+  collection_id: string;
 }
 
 function MainReservation() {
@@ -50,35 +51,28 @@ function MainReservation() {
             <p className="overviewReservation">{movies[1].overview}</p>
             <div className="hoursReservation">
               <button className="hoursButton" type="button">
-                {" "}
                 14h00
               </button>
               ;
               <button className="hoursButton" type="button">
-                {" "}
                 15h30
               </button>
               ;
               <button className="hoursButton" type="button">
-                {" "}
                 17h00
               </button>
               ;
               <MediaQuery minWidth={768}>
-                {" "}
                 {/* add button for tablet device */}
                 <button className="hoursButton" type="button">
-                  {" "}
                   18h30
                 </button>
                 ;
                 <button className="hoursButton" type="button">
-                  {" "}
                   20h00
                 </button>
                 ;
                 <button className="hoursButton" type="button">
-                  {" "}
                   21h30
                 </button>
                 ;
