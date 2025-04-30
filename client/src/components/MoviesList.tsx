@@ -34,7 +34,6 @@ function MoviesList() {
       })
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
 
   return (
     <div className="upcomingBloc">
