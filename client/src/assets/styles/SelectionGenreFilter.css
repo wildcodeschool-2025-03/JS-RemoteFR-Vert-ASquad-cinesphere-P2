@@ -1,0 +1,115 @@
+.genre-filter-container {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.filter-toggle-button {
+    display: none;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-toggle-button:hover {
+    background-color: #1e1e1e;
+}
+
+.filter-content {
+    width: 100%;
+    display: block;
+}
+
+.genre-filter {
+    width: 100%;
+    margin: 0 auto 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.75);
+}
+
+.genre-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border: none;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0;
+    text-align: center;
+}
+
+.genre-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.genre-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.genre-checkbox {
+    margin-right: 10px;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    position: relative;
+    border-radius: 2px;
+}
+
+.genre-checkbox:checked {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.genre-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.genre-name {
+    color: white;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .genre-filter-container {
+        width: 100%;
+    }
+
+    .filter-toggle-button {
+        display: block;
+    }
+
+    .filter-content {
+        display: none;
+    }
+
+    .filter-content.visible {
+        display: block !important;
+    }
+}
