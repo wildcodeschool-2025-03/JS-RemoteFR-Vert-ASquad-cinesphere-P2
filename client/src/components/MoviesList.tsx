@@ -60,7 +60,11 @@ function MoviesList() {
             />
             <div className="favoriteBlock">
               <h3>
-                <button type="button" onClick={toggleLike}>
+                <button
+                  className="buttonFavorite"
+                  type="button"
+                  onClick={toggleLike}
+                >
                   {liked ? "❤️" : "🤍"}
                 </button>
                 <Link to={`/movie/${movie.id}`}>

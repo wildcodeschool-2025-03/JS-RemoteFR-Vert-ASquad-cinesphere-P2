@@ -2,6 +2,17 @@ import { useEffect, useState } from "react";
 import "../assets/styles/MainReservation.css";
 import { useParams } from "react-router";
 
+interface Credit {
+  id: number;
+  known_for_department: string;
+  name: string;
+  original_name: string;
+  popularity: number;
+  profile_path: string;
+  character: string;
+  credit_id: string;
+}
+
 interface Movie {
   id: number;
   title: string;
@@ -10,6 +21,7 @@ interface Movie {
   collection_id: string;
   backdrop_path: string;
   release_date: string;
+  cast: Credit[];
 }
 
 function MainReservation() {
