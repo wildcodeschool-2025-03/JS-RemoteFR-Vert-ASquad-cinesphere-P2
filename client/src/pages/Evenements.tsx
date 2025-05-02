@@ -1,9 +1,5 @@
-import "../styles/Evenments.css";
+import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
-
-type HeaderButtonProps = {
-  onClick?: () => void;
-};
 
 type Movie = {
   id: number;
@@ -12,7 +8,7 @@ type Movie = {
   poster_path: string;
 };
 
-function Evenements({ onClick }: HeaderButtonProps) {
+function Evenements() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const token = import.meta.env.VITE_TOKEN_API;
 
@@ -38,20 +34,9 @@ function Evenements({ onClick }: HeaderButtonProps) {
 
   return (
     <>
-      <div className="header">
-        <img
-          src="https://i.imgur.com/Eh9QyEb.png"
-          alt="Banniere img"
-          className="header-img"
-        />
-        <button type="button" className="header-button" onClick={onClick}>
-          Réservez maintenant
-        </button>
-      </div>
-
-      <div className="main">
+      <div className="">
         <h2>AVANT PREMIERES</h2>
-        <div className="movie-grid">
+        <div className="movie">
           {movies.slice(0, 4).map((movie) => (
             <div key={movie.id} className="movie-card">
               <img
@@ -61,7 +46,7 @@ function Evenements({ onClick }: HeaderButtonProps) {
               <div className="movie-info">
                 <h3>{movie.title}</h3>
                 <p>{movie.release_date}</p>
-                <button type="button" className="movie-btn">
+                <button type="button" className="film-btn">
                   20H00
                 </button>
               </div>

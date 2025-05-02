@@ -1,8 +1,11 @@
 import { Outlet } from "react-router";
 import "./App.css";
-import BannerOffer from "./components/BannerOffer";
 import "./assets/styles/MainTopCardList.css";
 import "./assets/styles/UpComing.css";
+import "./assets/styles/Navbar.css";
+import "./assets/styles/Burger.css";
+import "./assets/styles/Menu.css";
+import BannerOffer from "./components/BannerOffer";
 import Footer from "./components/Footer";
 import HeaderBanner from "./components/HeaderBanner";
 import Navbar from "./components/Navbar";

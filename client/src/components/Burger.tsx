@@ -1,4 +1,4 @@
-import "../styles/Burger.css";
+import "../assets/styles/Burger.css";
 
 type Props = {
   //Un true ou false pour savoir si le menu est ouvert
