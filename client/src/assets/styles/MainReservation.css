@@ -60,7 +60,8 @@
 }
 
 /* synopsis */
-.overviewReservation {
+.overviewReservation,
+.release_date {
   color: white;
   text-align: justify;
   font-size: 12px;
@@ -99,7 +100,8 @@
 }
 
 /* boutons des heures des séances */
-.hoursButton {
+.hoursButton,
+.hoursButtonMedia {
   background-color: white;
   border: solid white;
   text-shadow: none;
@@ -108,6 +110,15 @@
   padding: 10px 12px;
   margin: 10px 4px;
   color: black;
+}
+
+/* boutons des heures des séances à partir du format tablette */
+.hoursButtonMedia {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: unset;
+  }
 }
 
 .hoursButton:hover {
