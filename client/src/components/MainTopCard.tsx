@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type Film = {
+  id: number;
   title: string;
   poster_path: string;
 };
 
-function MainTopCard({ title, poster_path }: Film) {
+function MainTopCard({ title, poster_path, id }: Film) {
   const [liked, setLiked] = useState(false);
   const toggleLike = () => setLiked(!liked);
 
@@ -16,7 +18,7 @@ function MainTopCard({ title, poster_path }: Film) {
         <button type="button" onClick={toggleLike}>
           {liked ? "❤️" : "🤍"}
         </button>
-        {title}
+        <Link to={`/movie/${id}`}>{title}</Link>
       </h1>
     </div>
   );

@@ -1,0 +1,134 @@
+.Subscription {
+  background-image: url("https://img.freepik.com/premium-photo/young-couple-looking-while-sitting-outdoors_1048944-4287194.jpg?w=996");
+  background-size: cover;
+
+  padding: 2em 0em;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.firstBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.firstBlock h1 {
+  text-align: center;
+  background-color: transparent;
+  opacity: 100%;
+}
+
+.Subscription p {
+  font-size: 15px;
+  font-weight: 200;
+  text-align: center;
+  background-color: transparent;
+}
+
+.subBlock {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background-color: none;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.priceBlock {
+  background-color: black;
+  outline: solid white 1px;
+  border-radius: 15px;
+  width: 13em;
+  padding: 2em 2em;
+  margin: 2em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.priceBlock h2 {
+  margin-bottom: 0;
+}
+
+.priceBlock img {
+  width: 10em;
+  height: 3em;
+  object-fit: cover;
+  margin-top: 0;
+}
+
+.pricing {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.titleOffer {
+  display: none;
+}
+.subBtnBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.subBtnBlock h2 {
+  background-color: transparent;
+  color: white;
+}
+
+.subBtn {
+  margin-top: 1em;
+  padding: 3px 4em;
+  background-color: red;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .subBlock {
+    flex-direction: row;
+    margin-top: 5em;
+    gap: 5em;
+  }
+  .subBtnBlock {
+    width: 25em;
+  }
+
+  .titleOffer {
+    display: flex;
+  }
+
+  .Subscription {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .firstBlock p {
+    width: 30em;
+  }
+
+  .subBlock {
+    flex-direction: row;
+    margin-top: 6em;
+    gap: 20em;
+  }
+  .subBtnBlock {
+    width: 25em;
+  }
+
+  .titleOffer {
+    display: flex;
+  }
+
+  .Subscription {
+    margin-bottom: 0;
+  }
+}
