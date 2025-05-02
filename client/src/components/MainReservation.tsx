@@ -8,6 +8,8 @@ interface Movie {
   poster_path: string;
   overview: string;
   collection_id: string;
+  backdrop_path: string;
+  release_date: string;
 }
 
 function MainReservation() {
@@ -37,32 +39,44 @@ function MainReservation() {
 
   return (
     <div className="movieBanner">
-      <img src={apiImage + movie.poster_path} alt={movie.title} />
-      <h3 className="h3Movies">{movie.title}</h3>
+      <img
+        className="backGroundBloc"
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w780${movie?.backdrop_path})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        alt=""
+      />
+      <div className="moviesContent">
+        <img src={apiImage + movie.poster_path} alt={movie.title} />
 
-      <div className="container">
-        <p className="overviewReservation">{movie.overview}</p>
+        <h3 className="h3Movies">{movie.title}</h3>
+        <p className="dateRelease">Date de sortie {movie.release_date}</p>
+        <div className="container">
+          <p className="overviewReservation">{movie.overview}</p>
 
-        <div className="hoursReservation">
-          <button className="hoursButton" type="button">
-            14h00
-          </button>
-          <button className="hoursButton" type="button">
-            15h30
-          </button>
-          <button className="hoursButton" type="button">
-            17h00
-          </button>
+          <div className="hoursReservation">
+            <button className="hoursButton" type="button">
+              14h00
+            </button>
+            <button className="hoursButton" type="button">
+              15h30
+            </button>
+            <button className="hoursButton" type="button">
+              17h00
+            </button>
 
-          <button className="hoursButtonMedia" type="button">
-            18h30
-          </button>
-          <button className="hoursButtonMedia" type="button">
-            20h00
-          </button>
-          <button className="hoursButtonMedia" type="button">
-            21h30
-          </button>
+            <button className="hoursButtonMedia" type="button">
+              18h30
+            </button>
+            <button className="hoursButtonMedia" type="button">
+              20h00
+            </button>
+            <button className="hoursButtonMedia" type="button">
+              21h30
+            </button>
+          </div>
         </div>
       </div>
 
