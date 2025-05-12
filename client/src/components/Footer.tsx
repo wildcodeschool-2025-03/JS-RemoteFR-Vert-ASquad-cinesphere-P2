@@ -103,7 +103,7 @@ const Footer: FC = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="footer-main">
           <div className="footer-brand">
             <div className="logo-container">

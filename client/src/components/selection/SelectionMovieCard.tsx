@@ -22,7 +22,7 @@ const SelectionMovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const { title, poster_path } = movie;
 
   return (
-    <div className="movie-card">
+    <div className="movie-cards">
       <div className="poster-container">
         <img
           src={getImageUrl(poster_path)}
