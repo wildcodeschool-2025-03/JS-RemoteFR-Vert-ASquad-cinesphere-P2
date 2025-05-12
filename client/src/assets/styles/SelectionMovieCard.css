@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.movie-card {
+.movie-cards {
   background-color: transparent;
   border-radius: 8px;
   overflow: hidden;
@@ -87,7 +87,7 @@
     padding: 0 20px;
   }
 
-  .movie-card {
+  .movie-cards {
     background-color: #121212;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
