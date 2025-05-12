@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { FC } from "react";
-import SelectionMovieCard from "./SelectionMovieCard";
 import SelectionGenreFilter from "./SelectionGenreFilter";
+import SelectionMovieCard from "./SelectionMovieCard";
 import "../../assets/styles/SelectionMovieList.css";
 
 type Movie = {
