@@ -58,6 +58,7 @@ function MoviesList() {
               alt={movie.title}
               className="roundedImage"
             />
+
             <div className="favoriteBlock">
               <h3>
                 <button
