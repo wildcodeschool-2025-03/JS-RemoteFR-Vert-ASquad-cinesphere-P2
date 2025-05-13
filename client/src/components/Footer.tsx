@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import "../assets/styles/footer.css";
+import "../assets/styles/Footer.css";
 
 type SocialLink = {
   id: string;
@@ -103,7 +103,7 @@ const Footer: FC = () => {
 
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="footer-main">
           <div className="footer-brand">
             <div className="logo-container">
