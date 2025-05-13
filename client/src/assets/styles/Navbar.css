@@ -12,7 +12,7 @@
 .logo {
   display: flex;
   align-items: center;
-  width: 5px;
+  width: fit-content;
   height: auto;
 }
 
@@ -26,6 +26,7 @@
 .navbar-pages {
   display: flex;
   justify-self: center;
+  align-items: center;
   transition: all 0.3s ease;
 }
 
@@ -135,8 +136,8 @@
     transform: translateY(0);
   }
 
-  /* Espacement des icones sur mobile et tablette */
-  .navbar-icons {
-    margin-top: 1rem;
+  /* Liste des liens dan la navbar */
+  .navbar ul {
+    display: none;
   }
 }
