@@ -3,12 +3,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
 
 interface movie {
   id: number;
   title: string;
   poster_path: string;
+  overwiew: string;
 }
 
 function MoviesList() {
@@ -61,7 +63,10 @@ function MoviesList() {
                 <button type="button" onClick={toggleLike}>
                   {liked ? "❤️" : "🤍"}
                 </button>
-                {movie.title}
+                <Link to={`/movie/${movie.id}`}>
+                  {movie.title}
+                  {movie.overwiew}
+                </Link>
               </h3>
             </div>
           </SwiperSlide>

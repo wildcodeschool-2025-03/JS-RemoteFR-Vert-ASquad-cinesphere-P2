@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
-  background-color: #0f0f0f;
-  margin: 0;
   font-family: "Inter", sans-serif;
 }
 
@@ -31,12 +29,22 @@
   object-fit: cover;
 }
 
-.movieCard h1 {
+.titleMovie {
   padding: 1em 0em;
   font-size: 15px;
-  width: 10em;
+  width: 18em;
   height: 2em;
   font-weight: 400;
+  text-decoration: none;
+}
+
+.movieLink {
+  text-decoration: none;
+
+}
+
+.movieLink:hover {
+  text-decoration: none;
 }
 
 .affiche {
@@ -60,7 +68,7 @@
   background-color: grey !important;
 }
 
-button {
+.movieBtn {
   all: unset;
   padding-right: 10px;
   cursor: pointer;

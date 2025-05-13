@@ -1,4 +1,4 @@
-import "../styles/Subscription.css";
+import "../assets/styles/Subscription.css";
 
 function Subscription() {
   return (

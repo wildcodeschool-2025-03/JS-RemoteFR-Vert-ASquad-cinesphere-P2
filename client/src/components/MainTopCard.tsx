@@ -14,11 +14,11 @@ function MainTopCard({ title, poster_path, id }: Film) {
   return (
     <div className="movieCard">
       <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={title} />
-      <h1>
-        <button type="button" onClick={toggleLike}>
+      <h1 className="titleMovie">
+        <button className="movieBtn" type="button" onClick={toggleLike}>
           {liked ? "❤️" : "🤍"}
         </button>
-        <Link to={`/movie/${id}`}>{title}</Link>
+        <Link to={`/movie/${id}`} className="movieLink">{title}</Link>
       </h1>
     </div>
   );

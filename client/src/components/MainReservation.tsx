@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "../assets/styles/MainReservation.css";
-import MediaQuery from "react-responsive";
+import { useParams } from "react-router";
 
-interface movie {
+interface Movie {
   id: number;
   title: string;
   poster_path: string;
@@ -11,87 +11,68 @@ interface movie {
 }
 
 function MainReservation() {
-  const [movies, setMovies] = useState<movie[]>([]);
+  const [movie, setMovie] = useState<Movie | null>(null);
   const apiImage = "https://image.tmdb.org/t/p/w300";
   const token = import.meta.env.VITE_TOKEN_API;
+  const { id } = useParams();
 
   useEffect(() => {
-    const options = {
+    if (!id) return;
+
+    fetch(`https://api.themoviedb.org/3/movie/${id}?language=fr-FR`, {
       method: "GET",
       headers: {
         accept: "application/json",
         Authorization: `Bearer ${token}`,
       },
-    };
-
-    fetch(
-      "https://api.themoviedb.org/3/movie/now_playing?language=fr-FR",
-      options,
-    )
+    })
       .then((res) => res.json())
       .then((data) => {
-        setMovies(data.results || []);
+        setMovie(data);
       })
       .catch((err) => console.error(err));
-  }, []);
+  }, [id]);
+
+  if (!movie) return <p>"Chargement ....🎬"</p>;
 
   return (
     <div className="movieBanner">
-      {movies[1] ? (
-        <>
-          <img
-            src={apiImage + movies[1].poster_path}
-            alt={movies[1].title}
-            className="movieImage"
-          />
+      <img src={apiImage + movie.poster_path} alt={movie.title} />
+      <h3 className="h3Movies">{movie.title}</h3>
 
-          <h3 className="h3Movies">{movies[1].title}</h3>
+      <div className="container">
+        <p className="overviewReservation">{movie.overview}</p>
 
-          <div className="container">
-            <p className="overviewReservation">{movies[1].overview}</p>
-            <div className="hoursReservation">
-              <button className="hoursButton" type="button">
-                14h00
-              </button>
-              ;
-              <button className="hoursButton" type="button">
-                15h30
-              </button>
-              ;
-              <button className="hoursButton" type="button">
-                17h00
-              </button>
-              ;
-              <MediaQuery minWidth={768}>
-                {/* add button for tablet device */}
-                <button className="hoursButton" type="button">
-                  18h30
-                </button>
-                ;
-                <button className="hoursButton" type="button">
-                  20h00
-                </button>
-                ;
-                <button className="hoursButton" type="button">
-                  21h30
-                </button>
-                ;
-              </MediaQuery>
-            </div>
-          </div>
-        </>
-      ) : (
-        "🎬"
-      )}
+        <div className="hoursReservation">
+          <button className="hoursButton" type="button">
+            14h00
+          </button>
+          <button className="hoursButton" type="button">
+            15h30
+          </button>
+          <button className="hoursButton" type="button">
+            17h00
+          </button>
+
+          <button className="hoursButtonMedia" type="button">
+            18h30
+          </button>
+          <button className="hoursButtonMedia" type="button">
+            20h00
+          </button>
+          <button className="hoursButtonMedia" type="button">
+            21h30
+          </button>
+        </div>
+      </div>
 
       <div className="caddiesReservation">
         <button className="caddiesButton" type="button">
-          {" "}
           Ajouter au panier
         </button>
-        ;
       </div>
     </div>
   );
 }
+
 export default MainReservation;
