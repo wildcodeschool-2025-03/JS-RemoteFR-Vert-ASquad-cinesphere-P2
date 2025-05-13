@@ -1,7 +1,6 @@
 .Subscription {
-  background-image: 
-  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url("https://img.freepik.com/premium-photo/young-couple-looking-while-sitting-outdoors_1048944-4287194.jpg?w=996");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://img.freepik.com/premium-photo/young-couple-looking-while-sitting-outdoors_1048944-4287194.jpg?w=996");
   background-size: cover;
   background-position: center;
   padding: 2em 0em;
@@ -11,7 +10,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .firstBlock {
   display: flex;

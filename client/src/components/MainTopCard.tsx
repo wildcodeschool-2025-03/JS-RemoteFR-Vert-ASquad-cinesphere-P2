@@ -18,7 +18,9 @@ function MainTopCard({ title, poster_path, id }: Film) {
         <button className="movieBtn" type="button" onClick={toggleLike}>
           {liked ? "❤️" : "🤍"}
         </button>
-        <Link to={`/movie/${id}`} className="movieLink">{title}</Link>
+        <Link to={`/movie/${id}`} className="movieLink">
+          {title}
+        </Link>
       </h1>
     </div>
   );

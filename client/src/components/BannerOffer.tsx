@@ -4,12 +4,16 @@ function BannerOffer() {
   return (
     <div className="containerBanner">
       <h1 className="offerTitle">Un monde de cinéma vous attend !</h1>
-      <h2 className="offersubTtitle">Plus de 20 films à l'affiche chaque semaine</h2>
+      <h2 className="offersubTtitle">
+        Plus de 20 films à l'affiche chaque semaine
+      </h2>
       <img
         src="https://www.lejdd.fr/lmnr/var/jdd/public/media/image/2022/07/22/15/cinema-pourquoi-les-affiches-de-comedies-sont-elles-si-moches.jpg?VersionId=.HhdWSAzszgPlts8RCmi.26LXAM5DZXV"
         alt="affiches de films"
       />
-      <button type="button" className="offerBtn">Découvrez notre sélection</button>
+      <button type="button" className="offerBtn">
+        Découvrez notre sélection
+      </button>
     </div>
   );
 }

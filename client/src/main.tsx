@@ -65,7 +65,6 @@ const router = createBrowserRouter([
       {
         path: "/movie/:id",
         element: <ReservationPage />,
-
       },
 
       {
