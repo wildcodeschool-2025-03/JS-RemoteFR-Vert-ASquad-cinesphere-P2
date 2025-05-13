@@ -1,36 +1,69 @@
-/*Image du film */
-.movieImage {
-  width: fit-content;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 1em;
-
-  @media (min-width: 768px) {
-    height: auto;
-    object-fit: cover;
-  }
-}
-
 /* Bloc de la page réservation */
 .movieBanner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
 
+  /* Breakpoint  */
   @media (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
+/* Image de fond */
+.backGroundBloc {
+  @media (min-width: 1024px) {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.2;
+  }
+}
+
+/* Bloc des contenus des films */
+.moviesContent {
+  @media (min-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Breakpoint  */
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    background-color: transparent;
+  }
+}
+
+/*Image du film */
+.movieImage {
+  width: fit-content;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1em;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/*fond jaune h3 */
 .h3Movies {
-  font-size: 14px;
   background-color: #ffc219;
 
+  /* Breakpoint  */
   @media (min-width: 768px) {
-    /*fond jaune h3 */
-
     padding: 4px 8px;
     display: inline-block;
     width: 25%;
@@ -45,7 +78,9 @@
   flex-direction: column;
   align-items: center;
   width: 94%;
+  background: none;
 
+  /* Breakpoint  */
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -60,17 +95,46 @@
 }
 
 /* synopsis */
-.overviewReservation,
-.release_date {
+.overviewReservation {
   color: white;
   text-align: justify;
-  font-size: 12px;
-  width: 90%;
+  font-size: 14px;
+  margin-top: 1em;
   margin-bottom: 1em;
 
   @media (min-width: 768px) {
     width: 60%;
   }
+}
+
+.distributionContaint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.swiper {
+  width: 19em;
+  margin-bottom: 1em;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    width: 35em;
+  }
+
+  @media (min-width: 992px) {
+    width: 50em;
+  }
+}
+
+.swiper-pagination {
+  display: none;
 }
 
 /* Bloc boutons des heures des séances */
@@ -79,7 +143,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 1em;
+  background: none;
 
+  /* Breakpoint  */
   @media (min-width: 768px) and (max-width: 1080px) {
     display: flex;
     flex-wrap: wrap;
@@ -121,9 +187,14 @@
   }
 }
 
+/* Survol des boutons horaires */
 .hoursButton:hover {
   background-color: #ffc219;
   border: #ffc219;
+}
+
+.caddiesReservation {
+  background: none;
 }
 
 /* bouton ajouter au panier */
@@ -136,4 +207,40 @@
   @media (min-width: 768px) {
     padding: 10px 80px;
   }
+}
+
+/* titre "Date de sorties */
+.dateRelease {
+  @media (min-width: 1024px) {
+    background-color: transparent;
+  }
+}
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.castItem {
+  width: 120px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.castImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.castName {
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+}
+
+.castCharacter {
+  font-style: italic;
+  color: #ccc;
+  margin: 0;
 }
