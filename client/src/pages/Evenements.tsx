@@ -10,6 +10,7 @@ type Movie = {
 
 function Evenements() {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [selectedId, setSelectedId] = useState<number | null>(null);
   const token = import.meta.env.VITE_TOKEN_API;
 
   useEffect(() => {
@@ -32,21 +33,29 @@ function Evenements() {
       .catch((err) => console.error(err));
   }, []);
 
+  const clicked = (id: number) => {
+    setSelectedId(id);
+  };
+
   return (
     <>
       <div className="">
         <h2>AVANT PREMIERES</h2>
         <div className="movie">
           {movies.slice(0, 4).map((movie) => (
-            <div key={movie.id} className="movie-card">
+            <div key={movie.id} className="film-affiche">
               <img
                 src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                 alt={movie.title}
               />
               <div className="movie-info">
                 <h3>{movie.title}</h3>
-                <p>{movie.release_date}</p>
-                <button type="button" className="film-btn">
+                <p>Sortie: {movie.release_date}</p>
+                <button
+                  type="button"
+                  className={`film-btn ${selectedId === movie.id ? "active" : ""}`}
+                  onClick={() => clicked(movie.id)}
+                >
                   20H00
                 </button>
               </div>
