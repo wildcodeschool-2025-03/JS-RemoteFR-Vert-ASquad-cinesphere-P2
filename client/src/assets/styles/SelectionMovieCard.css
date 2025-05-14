@@ -16,6 +16,13 @@
   height: 100%;
   width: 100%;
   margin-bottom: 15px;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.movie-cards:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(252, 211, 77, 0.2);
 }
 
 .poster-container {
@@ -31,17 +38,31 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 300ms;
 }
 
-.content {
-  padding: 8px 0;
+.movie-cards:hover .poster-image {
+  transform: scale(1.1);
+}
+
+.movie-content {
+  position: absolute;
+  inset: 0;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
-.title {
+.movie-cards:hover .movie-content {
+  opacity: 1;
+}
+
+.movie-title {
   font-size: 14px;
   font-weight: 500;
   color: white;
@@ -54,21 +75,59 @@
   text-align: center;
 }
 
+.movie-overview {
+  font-size: 12px;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.release-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.date-text {
+  font-size: 12px;
+}
+
 .reservation-button,
 .button-primary {
-  background-color: #c00;
-  color: white;
+  background-color: #fbbf24;
+  color: black;
   border: none;
-  padding: 8px 10px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 8px;
   font-size: 12px;
+  font-weight: 700;
   cursor: pointer;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 200ms;
+  transform-origin: center;
 }
 
 .reservation-button:hover,
 .button-primary:hover {
-  background-color: #e00;
+  background-color: #fcd34d;
+  transform: scale(1.05);
+}
+
+.reservation-button:active,
+.button-primary:active {
+  transform: scale(0.95);
 }
 
 .section-title {
@@ -88,7 +147,6 @@
   }
 
   .movie-cards {
-    background-color: #121212;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
 
@@ -96,14 +154,32 @@
     padding-bottom: 140%;
   }
 
-  .content {
+  .movie-content {
     padding: 12px;
   }
 
-  .title {
+  .movie-title {
     font-size: 16px;
     height: 40px;
     margin-bottom: 10px;
+  }
+
+  .movie-overview {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .release-date {
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .date-text {
+    font-size: 14px;
   }
 
   .reservation-button,
