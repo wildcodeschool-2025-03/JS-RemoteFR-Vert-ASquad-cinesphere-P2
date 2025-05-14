@@ -1,7 +1,6 @@
 .header-button {
   display: flex;
   margin: 0 auto;
-  background-color: #c00f0c;
   color: white;
   border: none;
   border-radius: 25px;
@@ -10,27 +9,32 @@
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
   position: absolute;
-  top: 20vh;
-  left: 11vh;
+  top: 25%;
+  left: 25%;
+  background-image: linear-gradient(to right, #C00F0C 0%, #ad1913 51%, #c00f0c 100%);
+  background-size: 200% auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-button:hover {
-  background-color: #a00d0a;
+  background-position: right center;
+  transform: translateY(-0.25em);
+  box-shadow: 0 10px 9px -3px rgba(96, 0, 0, 0.38);
 }
 
 .header-button:active {
+  transform: translateY(0);
+  box-shadow: unset;
   background-color: #800b08;
-  transform: translateY(1px);
 }
 
 @media (min-width: 768px) {
   .header-button {
     padding: 10px 20px;
-    font-size: 15px;
-    top: 35vh;
-    left: 93vh;
+    font-size: 25px;
+    top: 49%;
+    left: 45%;
   }
 }
