@@ -13,7 +13,10 @@
   position: absolute;
   top: 25%;
   left: 25%;
-  background-image: linear-gradient(to right, #C00F0C 0%, #ad1913 51%, #c00f0c 100%);
+  background-image: linear-gradient(to right,
+      #c00f0c 0%,
+      #ad1913 51%,
+      #c00f0c 100%);
   background-size: 200% auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
