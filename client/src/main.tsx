@@ -60,9 +60,8 @@ const router = createBrowserRouter([
         path: "/movie/:id",
         element: <ReservationPage />,
       },
-
       {
-        path: "/video/:id",
+        path: "/Film/:id",
         element: <ReservationPage />,
       },
     ], // Renders the App component for the home page

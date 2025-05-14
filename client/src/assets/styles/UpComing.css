@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 3em;
 }
 
 /* Titre du bloc "Sorties Récentes */
@@ -65,7 +64,7 @@
 /* Titre des films */
 .titleMovies {
   color: white;
-  font-size: 0.9em;
+  font-size: 1em;
   margin: 1em 0 2em 0;
   text-align: center;
   text-decoration-style: none;

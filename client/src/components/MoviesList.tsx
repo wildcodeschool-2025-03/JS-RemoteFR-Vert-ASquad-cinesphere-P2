@@ -39,7 +39,7 @@ function MoviesList() {
 
   return (
     <div className="upcomingBloc">
-      <h2 className="titleSortiesRecentes"> SORTIES RÉCENTES</h2>{" "}
+      <h2 className="titleSortiesRecentes"> SORTIES RÉCENTES</h2>
       <Swiper
         className="swiperHome"
         modules={[Navigation, Pagination]}

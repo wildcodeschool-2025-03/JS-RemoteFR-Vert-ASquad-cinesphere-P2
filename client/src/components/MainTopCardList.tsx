@@ -5,7 +5,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../assets/styles/MainTopCardList.css";
 
 type Movie = {
   id: number;
@@ -41,7 +40,7 @@ function MainTopCardList() {
   return (
     <div>
       <div className="cardBox">
-        <h1 className="affiche">FILMS À L'AFFICHE</h1>
+        <h2 className="titleSortiesRecentes"> FILMS À L'AFFICHE</h2>
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={15}
@@ -62,11 +61,13 @@ function MainTopCardList() {
             },
           }}
         >
-          {movies.map((movies) => (
-            <SwiperSlide key={movies.id}>
+          {movies.map((movie) => (
+            <SwiperSlide className="swipperSlideHome" key={movie.id}>
               <MainTopCard
-                title={movies.title}
-                poster_path={movies.poster_path}
+                id={movie.id}
+                title={movie.title}
+                poster_path={movie.poster_path}
+                overview={movie.overview}
               />
             </SwiperSlide>
           ))}

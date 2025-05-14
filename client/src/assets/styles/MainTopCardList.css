@@ -15,30 +15,6 @@
   margin-top: 3em;
 }
 
-.movieCard {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  margin: 2em;
-}
-
-.movieCard img {
-  width: 10em;
-  height: 15em;
-  object-fit: cover;
-}
-
-.movieCard h1 {
-  padding: 1em 0em;
-  font-size: 15px;
-  width: 10em;
-  height: 2em;
-  font-weight: 400;
-}
-
 .affiche {
   color: black;
   background-color: #ffc219;
@@ -58,12 +34,6 @@
 
 .swiper-pagination-bullet {
   background-color: grey !important;
-}
-
-button {
-  all: unset;
-  padding-right: 10px;
-  cursor: pointer;
 }
 
 .swiper.swiper-initialized.swiper-horizontal {
