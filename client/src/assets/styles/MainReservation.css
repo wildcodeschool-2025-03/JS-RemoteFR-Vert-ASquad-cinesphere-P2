@@ -44,6 +44,13 @@
   }
 }
 
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
+
 /*Image du film */
 .movieImage {
   width: fit-content;
@@ -60,15 +67,23 @@
 
 /*fond jaune h3 */
 .h3Movies {
-  background-color: #ffc219;
+  font-family: sans-serif;
+  width: fit-content;
 
   /* Breakpoint  */
   @media (min-width: 768px) {
+    background-color: #ffc219;
     padding: 4px 8px;
     display: inline-block;
-    width: 25%;
+    width: fit-content;
     color: black;
     font-size: medium;
+  }
+
+  @media (min-width: 992px) {
+    color: black;
+    background-color: #ffc219;
+    width: fit-content;
   }
 }
 
@@ -101,6 +116,8 @@
   font-size: 14px;
   margin-top: 1em;
   margin-bottom: 1em;
+  background: none;
+  font-family: sans-serif;
 
   @media (min-width: 768px) {
     width: 60%;
@@ -119,17 +136,24 @@
   }
 }
 
-.swiper {
-  width: 19em;
+.swiperCasting {
+  width: 15em;
   margin-bottom: 1em;
 
   /* Breakpoint  */
   @media (min-width: 768px) {
-    width: 35em;
+    width: 45em;
   }
 
   @media (min-width: 992px) {
-    width: 50em;
+    width: 70em;
+    background: none;
+  }
+}
+
+.swiper-wrapper {
+  @media (min-width: 992px) {
+    background: none;
   }
 }
 
@@ -176,21 +200,20 @@
   padding: 10px 12px;
   margin: 10px 4px;
   color: black;
+
+  &:hover {
+    background-color: #ffc219;
+    border: #ffc219;
+  }
 }
 
-/* boutons des heures des séances à partir du format tablette */
+/* boutons des heures des séances à partir du format tablette et Survol */
 .hoursButtonMedia {
   display: none;
 
   @media (min-width: 768px) {
     display: unset;
   }
-}
-
-/* Survol des boutons horaires */
-.hoursButton:hover {
-  background-color: #ffc219;
-  border: #ffc219;
 }
 
 .caddiesReservation {
@@ -211,10 +234,14 @@
 
 /* titre "Date de sorties */
 .dateRelease {
+  margin-top: 1em;
+
   @media (min-width: 1024px) {
     background-color: transparent;
   }
 }
+
+/* Carousselle des acteurs */
 
 .castList {
   display: flex;
@@ -227,6 +254,7 @@
   width: 120px;
   text-align: center;
   font-size: 0.9rem;
+  background: none;
 }
 
 .castImage {
