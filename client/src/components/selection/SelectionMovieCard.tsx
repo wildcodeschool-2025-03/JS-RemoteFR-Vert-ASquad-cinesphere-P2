@@ -1,5 +1,5 @@
-import type React from "react";
 import { Calendar } from "lucide-react";
+import type React from "react";
 import "../../assets/styles/SelectionMovieCard.css";
 
 type Movie = {
@@ -44,7 +44,7 @@ const SelectionMovieCard: React.FC<SelectionMovieCardProps> = ({ movie }) => {
             <span className="date-text">{formattedDate}</span>
           </div>
           <button type="button" className="reservation-button">
-            Réservez maintenant
+            Réservez
           </button>
         </div>
       </div>
