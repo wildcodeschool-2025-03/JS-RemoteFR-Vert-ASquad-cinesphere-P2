@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { FC } from "react";
 import SelectionGenreFilter from "./SelectionGenreFilter";
 import SelectionMovieCard from "./SelectionMovieCard";
+import SelectionSearchBar from "./SelectionSearchBar";
 import "../../assets/styles/SelectionMovieList.css";
 
 type Movie = {
@@ -33,6 +34,7 @@ const SelectionMovieList: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const token = import.meta.env.VITE_TOKEN_API;
 
@@ -125,25 +127,36 @@ const SelectionMovieList: FC = () => {
   }, []);
 
   useEffect(() => {
+    let filtered = movies;
+
     const selectedGenreIds = genres
       .filter((genre: Genre) => genre.selected)
       .map((genre: Genre) => genre.id);
 
-    if (selectedGenreIds.length === 0) {
-      setFilteredMovies(movies);
-    } else {
-      const filtered = movies.filter((movie: Movie) =>
+    if (selectedGenreIds.length > 0) {
+      filtered = filtered.filter((movie: Movie) =>
         movie.genre_ids.some((id: number) => selectedGenreIds.includes(id)),
       );
-      setFilteredMovies(filtered);
     }
-  }, [genres, movies]);
+
+    if (searchQuery.trim() !== "") {
+      filtered = filtered.filter((movie: Movie) =>
+        movie.title.toLowerCase().includes(searchQuery.toLowerCase()),
+      );
+    }
+
+    setFilteredMovies(filtered);
+  }, [genres, movies, searchQuery]);
 
   const handleToggleGenre = (id: number) => {
     const updatedGenres = genres.map((genre: Genre) =>
       genre.id === id ? { ...genre, selected: !genre.selected } : genre,
     );
     setGenres(updatedGenres);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
   };
 
   if (loading) {
@@ -156,15 +169,22 @@ const SelectionMovieList: FC = () => {
 
   return (
     <div className="selection-container">
-      <button
-        type="button"
-        className="filter-toggle-button"
-        onClick={() => setShowFilters(!showFilters)}
-      >
-        <span>
-          {showFilters ? "Masquer les filtres" : "Afficher les filtres"}
-        </span>
-      </button>
+      <h2 className="movies-title">NOTRE SELECTION</h2>
+      <div className="search-and-filter-controls">
+        <button
+          type="button"
+          className="filter-toggle-button"
+          onClick={() => setShowFilters(!showFilters)}
+        >
+          <span>
+            {showFilters ? "Masquer les filtres" : "Afficher les filtres"}
+          </span>
+        </button>{" "}
+        <SelectionSearchBar
+          searchQuery={searchQuery}
+          onSearchChange={handleSearchChange}
+        />
+      </div>
 
       <div className="selection-content">
         <div className={`filter-sidebar ${showFilters ? "visible" : ""}`}>
@@ -175,12 +195,18 @@ const SelectionMovieList: FC = () => {
         </div>
 
         <div className="movies-container">
-          <h2 className="movies-title">NOTRE SELECTION</h2>
-          <div className="movies-grid">
-            {filteredMovies.map((movie: Movie) => (
-              <SelectionMovieCard key={movie.id} movie={movie} />
-            ))}
-          </div>
+          {filteredMovies.length > 0 ? (
+            <div className="movies-grid">
+              {filteredMovies.map((movie: Movie) => (
+                <SelectionMovieCard key={movie.id} movie={movie} />
+              ))}
+              =
+            </div>
+          ) : (
+            <div className="no-results">
+              <p>Aucun film ne correspond à votre recherche.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
