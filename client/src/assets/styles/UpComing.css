@@ -65,7 +65,7 @@
 .titleMovies {
   color: white;
   font-size: 1em;
-  margin: 1em 0 2em 0;
+  margin: 0.5em 0 2em 0;
   text-align: center;
   text-decoration-style: none;
   font-family: sans-serif;
@@ -84,12 +84,12 @@
 /* Bouton "ajouter aux favoris */
 .buttonFavorite {
   background-color: red;
-  /*   border: none;
-  margin-right: 0.2em; */
+  border: none;
+  margin-right: 0.2em;
   display: inline-block;
   text-decoration: none;
   border: #666 1px solid;
-  margin: 2px;
+  margin-top: 2px;
   font-size: 11px;
   cursor: pointer;
   width: 25px;

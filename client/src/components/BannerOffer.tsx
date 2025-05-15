@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "../assets/styles/BannerOffer.css";
+import { Link } from "react-router-dom";
 
 type Movie = {
   id: number;
@@ -43,11 +44,13 @@ function BannerOffer() {
       <div className="blocImgBanner">
         {movies.slice(0, 3).map((movie) => (
           <div key={movie.id}>
-            <img
-              className="imgBanner"
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt={movie.title}
-            />
+            <Link to={`/movie/${movie.id}`}>
+              <img
+                className="imgBanner"
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+              />
+            </Link>
           </div>
         ))}
       </div>
