@@ -83,7 +83,7 @@
 
 /* Bouton "ajouter aux favoris */
 .buttonFavorite {
-  color: red;
+  background-color: red;
   /*   border: none;
   margin-right: 0.2em; */
   display: inline-block;

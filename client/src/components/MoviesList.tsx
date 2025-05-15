@@ -10,7 +10,7 @@ interface movie {
   id: number;
   title: string;
   poster_path: string;
-  overwiew: string;
+  overview: string;
 }
 
 function MoviesList() {
@@ -25,7 +25,7 @@ function MoviesList() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${token}`, // ← CORRECT ici
+        Authorization: `Bearer ${token}`,
       },
     };
 
@@ -71,7 +71,6 @@ function MoviesList() {
                 </button>
                 <Link className="movieLink" to={`/movie/${movie.id}`}>
                   {movie.title}
-                  {movie.overwiew}
                 </Link>
               </h3>
             </div>
