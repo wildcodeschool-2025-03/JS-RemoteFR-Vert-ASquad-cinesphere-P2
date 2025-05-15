@@ -39,20 +39,21 @@ function MoviesList() {
 
   return (
     <div className="upcomingBloc">
-      <h2> Sorties Récentes </h2>{" "}
+      <h2 className="titleSortiesRecentes"> SORTIES RÉCENTES</h2>{" "}
       <Swiper
+        className="swiperHome"
         modules={[Navigation, Pagination]}
-        spaceBetween={15}
+        spaceBetween={20}
         slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
           768: { slidesPerView: 3, spaceBetween: 20 },
-          1080: { slidesPerView: 4, spaceBetween: 20 },
+          1080: { slidesPerView: 4, spaceBetween: 15 },
         }}
       >
         {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
+          <SwiperSlide className="swipperSlideHome" key={movie.id}>
             <img
               src={`${apiImage}${movie.poster_path}`}
               alt={movie.title}
@@ -60,7 +61,7 @@ function MoviesList() {
             />
 
             <div className="favoriteBlock">
-              <h3>
+              <h3 className="titleMovies">
                 <button
                   className="buttonFavorite"
                   type="button"
@@ -68,7 +69,7 @@ function MoviesList() {
                 >
                   {liked ? "❤️" : "🤍"}
                 </button>
-                <Link to={`/movie/${movie.id}`}>
+                <Link className="movieLink" to={`/movie/${movie.id}`}>
                   {movie.title}
                   {movie.overwiew}
                 </Link>

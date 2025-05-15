@@ -1,61 +1,102 @@
 /* Bloc "Sorties Récentes */
 .upcomingBloc {
-  text-align: center;
-  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3em;
 }
 
 /* Titre du bloc "Sorties Récentes */
 
-h2 {
+.titleSortiesRecentes {
   text-align: center;
-  margin-bottom: 0.5em;
   color: white;
   padding: 1em 0em;
   font-size: 20px;
-  margin-bottom: 2em;
+  font-family: sans-serif;
+  margin-bottom: 1em;
 
   @media (min-width: 768px) {
     /*fond jaune h3 */
-    background-color: #ffc219;
-    padding: 4px 8px;
-    display: inline-block;
-
     color: black;
+    background-color: #ffc219;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    width: fit-content;
   }
 }
 
 /* Image du caroussel */
 .roundedImage {
-  width: 10em;
+  width: fit-content;
   height: 15em;
   object-fit: cover;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    width: fit-content;
+    height: 15em;
+  }
+
+  @media (min-width: 992px) {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+.roundedImage:hover {
+  transform: scale(1.1);
+}
+
+.swipperSlideHome {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Titre des films */
-h3 {
+.titleMovies {
   color: white;
-  font-size: 20px;
-  margin-top: 1em;
+  font-size: 0.9em;
+  margin: 1em 0 2em 0;
   text-align: center;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 2em;
+  text-decoration-style: none;
+  font-family: sans-serif;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: white;
+  margin-left: 0.5em;
+
+  &:hover {
+    color: #ffc219;
+  }
 }
 
 /* Bouton "ajouter aux favoris */
 .buttonFavorite {
   color: red;
-  border: none;
-  margin-right: 0.2em;
-}
-
-/* Bouton précédant et suivant du caroussel */
-.swiper-button-prev,
-.swiper-button-next {
-  color: white;
+  /*   border: none;
+  margin-right: 0.2em; */
+  display: inline-block;
+  text-decoration: none;
+  border: #666 1px solid;
+  margin: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  padding: 4px 4px;
+  border-radius: 50%;
 }
 
 /* couleur pointeur Barre de swipe */

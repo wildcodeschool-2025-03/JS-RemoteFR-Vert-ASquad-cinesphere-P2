@@ -75,9 +75,11 @@ function MainReservation() {
       />
 
       <div className="moviesContent">
-        <img src={apiImage + movie.poster_path} alt={movie.title} />
-        <h3 className="h3Movies">{movie.title}</h3>
-        <p className="dateRelease">Date de sortie : {movie.release_date}</p>
+        <div className="textContainer">
+          <img src={apiImage + movie.poster_path} alt={movie.title} />
+          <h3 className="h3Movies">{movie.title}</h3>
+          <p className="dateRelease">Date de sortie : {movie.release_date}</p>
+        </div>
         <div className="container">
           <p className="overviewReservation">{movie.overview}</p>
 
@@ -103,15 +105,16 @@ function MainReservation() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="distributionContaint">
         <div className="caddiesReservation">
           <button className="caddiesButton" type="button">
             Ajouter au panier
           </button>
         </div>
-      </div>
-      <div className="distributionContaint">
         <h4>Distribution :</h4>
         <Swiper
+          className="swiperCasting"
           modules={[Navigation, Pagination]}
           spaceBetween={15}
           slidesPerView={2}
@@ -119,7 +122,7 @@ function MainReservation() {
           pagination={{ clickable: true }}
           breakpoints={{
             768: { slidesPerView: 4, spaceBetween: 20 },
-            1080: { slidesPerView: 6, spaceBetween: 20 },
+            1080: { slidesPerView: 5, spaceBetween: 20 },
           }}
         >
           <div className="castList">
