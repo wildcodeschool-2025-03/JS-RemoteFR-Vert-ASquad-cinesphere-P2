@@ -2,7 +2,6 @@
   background-color: #0f0f0f;
   padding: 2rem 0 1.5rem;
   width: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .footer-container {
@@ -79,14 +78,14 @@
 }
 
 .nav-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   width: 24px;
   height: 2px;
-  background-color: #FFC219;
+  background-color: #ffc219;
 }
 
 .nav-list {
@@ -113,13 +112,13 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #FFC219;
+  background-color: #ffc219;
   transition: width 0.3s ease;
 }
 
@@ -182,7 +181,7 @@
   animation: pulse 0.3s ease-in-out;
 }
 
-/* Tablettes (768px et plus) */
+/* Tablet*/
 @media (min-width: 768px) {
   .footer {
     padding: 2.5rem 0 1.5rem;
@@ -231,14 +230,14 @@
   }
 }
 
-/* Ordinateurs de bureau (1024px et plus) */
+/* Desktop */
 @media (min-width: 1024px) {
   .footer {
     padding: 3rem 0 1.5rem;
   }
 
   .footer-container {
-    max-width: 1200px;
+    max-width: 1800px;
     padding: 0 1.5rem;
   }
 
@@ -277,13 +276,6 @@
 
   .nav-title {
     font-size: 1.125rem;
-  }
-}
-
-/* Grand écran (1920px et plus) */
-@media (min-width: 1920px) {
-  .footer-container {
-    max-width: 1800px;
   }
 
   .footer-nav {
