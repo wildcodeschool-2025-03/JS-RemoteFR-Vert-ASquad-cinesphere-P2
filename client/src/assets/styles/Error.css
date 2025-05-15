@@ -1,0 +1,7 @@
+.Errorimg {
+  width: 100%;
+  height: 100em;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}

@@ -1,5 +1,6 @@
 import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
+import BannerOffer from "../components/BannerOffer";
 
 type Movie = {
   id: number;
@@ -63,6 +64,7 @@ function Evenements() {
           ))}
         </div>
       </div>
+      <BannerOffer />
     </>
   );
 }
