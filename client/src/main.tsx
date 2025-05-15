@@ -36,6 +36,7 @@ const router = createBrowserRouter([
         path: "",
         element: <HomePage />, // Renders the App component for the home page
       },
+
       {
         path: "/Reservation",
         element: <ReservationPage />,
@@ -66,9 +67,8 @@ const router = createBrowserRouter([
         path: "/movie/:id",
         element: <ReservationPage />,
       },
-
       {
-        path: "/video/:id",
+        path: "/Film/:id",
         element: <ReservationPage />,
       },
     ], // Renders the App component for the home page
