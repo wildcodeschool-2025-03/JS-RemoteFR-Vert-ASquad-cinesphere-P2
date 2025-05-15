@@ -8,25 +8,21 @@ type Film = {
   overview: string;
 };
 
-function MainTopCard({ id, title, poster_path }: Film) {
+function MainTopCard({ title, poster_path, id }: Film) {
   const [liked, setLiked] = useState(false);
   const toggleLike = () => setLiked(!liked);
 
   return (
     <div className="movieCard">
-      <img
-        src={`https://image.tmdb.org/t/p/w200${poster_path}`}
-        alt={title}
-        className="roundedImage"
-      />
-      <h3 className="titleMovies">
-        <button className="buttonFavorite" type="button" onClick={toggleLike}>
+      <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={title} />
+      <h1 className="titleMovie">
+        <button className="movieBtn" type="button" onClick={toggleLike}>
           {liked ? "❤️" : "🤍"}
         </button>
-        <Link className="movieLink" to={`/Film/${id}`}>
+        <Link to={`/movie/${id}`} className="movieLink">
           {title}
         </Link>
-      </h3>
+      </h1>
     </div>
   );
 }

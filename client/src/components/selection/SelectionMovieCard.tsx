@@ -1,3 +1,4 @@
+import { Calendar } from "lucide-react";
 import type React from "react";
 import "../../assets/styles/SelectionMovieCard.css";
 
@@ -9,7 +10,7 @@ type Movie = {
   release_date: string;
 };
 
-type MovieCardProps = {
+type SelectionMovieCardProps = {
   movie: Movie;
 };
 
@@ -18,8 +19,14 @@ const getImageUrl = (path: string | null): string => {
   return `https://image.tmdb.org/t/p/w500${path}`;
 };
 
-const SelectionMovieCard: React.FC<MovieCardProps> = ({ movie }) => {
-  const { title, poster_path } = movie;
+const SelectionMovieCard: React.FC<SelectionMovieCardProps> = ({ movie }) => {
+  const { title, poster_path, overview, release_date } = movie;
+
+  const formattedDate = new Date(release_date).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <div className="movie-cards">
@@ -29,12 +36,17 @@ const SelectionMovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           alt={title}
           className="poster-image"
         />
-      </div>
-      <div className="content">
-        <h3 className="title">{title}</h3>
-        <button type="button" className="reservation-button">
-          Réservez maintenant
-        </button>
+        <div className="movie-content">
+          <h3 className="movie-title">{title}</h3>
+          <p className="movie-overview">{overview}</p>
+          <div className="release-date">
+            <Calendar className="icon" />
+            <span className="date-text">{formattedDate}</span>
+          </div>
+          <button type="button" className="reservation-button">
+            Réservez
+          </button>
+        </div>
       </div>
     </div>
   );
