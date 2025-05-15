@@ -65,6 +65,7 @@ function MainTopCardList() {
           {movies.map((movies) => (
             <SwiperSlide key={movies.id}>
               <MainTopCard
+                id={movies.id}
                 title={movies.title}
                 poster_path={movies.poster_path}
               />

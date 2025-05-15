@@ -11,10 +11,11 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App";
 import Evenements from "./pages/Evenements";
 import HomePage from "./pages/HomePage";
-import Offres from "./pages/Offres";
 import Panier from "./pages/Panier";
 import ReservationPage from "./pages/ReservationPage";
 import Selection from "./pages/Selection";
+import Offres from "./pages/SubscriptionPage";
+import SubscriptionPage from "./pages/SubscriptionPage";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: "/Selection",
         element: <Selection />,
+      },
+
+      {
+        path: "/Subscription",
+        element: <SubscriptionPage />,
       },
 
       {

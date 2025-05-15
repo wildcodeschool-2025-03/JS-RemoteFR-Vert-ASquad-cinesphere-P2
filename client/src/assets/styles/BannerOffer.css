@@ -24,17 +24,19 @@ img {
   margin-bottom: 1em;
 }
 
-h1 {
+.offerTitle {
   font-size: 20px;
   margin-bottom: 1em;
+  background-color: none;
+  color: black;
 }
 
-h2 {
+.offersubTtitle {
   font-size: 15px;
   font-weight: 400;
 }
 
-button {
+.offerBtn {
   background-color: #c00f0c;
   color: white;
   border: none;
@@ -44,11 +46,11 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+.offerBtn:hover {
   background-color: #a00d0a;
 }
 
-button:active {
+.offerBtn:active {
   background-color: #800b08;
   transform: translateY(1px);
 }
