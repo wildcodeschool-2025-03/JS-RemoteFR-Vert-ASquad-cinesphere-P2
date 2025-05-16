@@ -1,6 +1,8 @@
 import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
 import BannerOffer from "../components/BannerOffer";
+import HeaderBanner from "../components/HeaderBanner";
+import HeaderButton from "../components/HeaderButton";
 
 type Movie = {
   id: number;
@@ -41,6 +43,8 @@ function Evenements() {
   return (
     <>
       <div className="">
+        <HeaderBanner />
+        <HeaderButton />
         <h2>AVANT PREMIERES</h2>
         <div className="movie">
           {movies.slice(0, 4).map((movie) => (
