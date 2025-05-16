@@ -75,7 +75,7 @@ const router = createBrowserRouter([
         element: <ReservationPage />,
       },
       {
-        path: "/Error404",
+        path: "/404",
         element: <ErrorPage />,
       },
     ], // Renders the App component for the home page
