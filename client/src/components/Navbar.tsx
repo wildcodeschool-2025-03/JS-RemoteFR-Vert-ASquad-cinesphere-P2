@@ -26,21 +26,23 @@ const Navbar = () => {
         </div>
 
         {/*Logo du site*/}
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
+        </Link>
 
         {/*Les différentes pages*/}
         <div className={`navbar-pages ${open ? "active" : ""}`}>
           <ul>
             <Link to="/">
-              <li>Acceuil</li>
+              <li>Accueil</li>
             </Link>
             <Link to="/evenements">
-              <li>Evenements</li>
+              <li>Événements</li>
             </Link>
             <Link to="/selection">
-              <li>Selection</li>
+              <li>Sélection</li>
             </Link>
             <Link to="/offres">
               <li>Offres</li>
@@ -50,7 +52,7 @@ const Navbar = () => {
           {/*Icons de la loupe et du panier */}
           <div className="navbar-icons">
             <Search className="icon" onClick={() => setShowModal(true)} />
-            <Link to="/panier">
+            <Link to="/Error404">
               <ShoppingCart className="icon" />
             </Link>
           </div>
