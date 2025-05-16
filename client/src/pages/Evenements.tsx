@@ -42,6 +42,10 @@ function Evenements() {
 
   return (
     <>
+      <>
+        <HeaderBanner />
+        <HeaderButton />
+      </>
       <div className="">
         <HeaderBanner />
         <HeaderButton />
