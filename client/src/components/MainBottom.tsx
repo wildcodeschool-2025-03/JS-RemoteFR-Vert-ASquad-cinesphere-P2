@@ -5,6 +5,7 @@ function MainBottom() {
     <div>
       {/* Titre du bloc "Sorties Récentes" */}
       <MoviesList />
+
       {/* Liste des films importés  de l'API*/}
     </div>
   );

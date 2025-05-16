@@ -5,6 +5,7 @@ type Film = {
   id: number;
   title: string;
   poster_path: string;
+  overview: string;
 };
 
 function MainTopCard({ title, poster_path, id }: Film) {

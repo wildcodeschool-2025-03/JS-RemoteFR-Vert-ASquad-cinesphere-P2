@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 50em;
 }
 
 .firstBlock {
@@ -17,6 +18,8 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  margin-top: 4em;
+  margin-bottom: 10em;
 }
 
 .firstBlock h1 {

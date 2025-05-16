@@ -5,7 +5,7 @@ import "./assets/styles/UpComing.css";
 import "./assets/styles/Navbar.css";
 import "./assets/styles/Burger.css";
 import "./assets/styles/Menu.css";
-import BannerOffer from "./components/BannerOffer";
+
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
@@ -14,7 +14,7 @@ function App() {
     <>
       <Navbar />
       <Outlet />
-      <BannerOffer />
+
       <Footer />
     </>
   );
