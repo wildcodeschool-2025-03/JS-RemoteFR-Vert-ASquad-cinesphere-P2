@@ -16,7 +16,7 @@
 /* Image de fond */
 .backGroundBloc {
   @media (min-width: 1024px) {
-    height: 100%;
+    height: 143%;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -49,6 +49,7 @@
   flex-direction: column;
   align-items: center;
   background: none;
+  margin-top: 5em;
 }
 
 /*Image du film */
@@ -223,6 +224,8 @@
 
 .caddiesReservation {
   background: none;
+  display: flex;
+  justify-content: center;
 }
 
 /* bouton ajouter au panier */

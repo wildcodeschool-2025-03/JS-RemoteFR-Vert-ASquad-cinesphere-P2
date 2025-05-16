@@ -44,6 +44,10 @@
   text-decoration: none;
 }
 
+.titleSortiesRecentes {
+  border-radius: 8px;
+}
+
 .movieLink {
   text-decoration: none;
 }

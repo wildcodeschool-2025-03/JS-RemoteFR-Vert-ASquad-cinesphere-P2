@@ -121,21 +121,21 @@ function MainReservation() {
             </button>
 
             <button
-              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              className={`hoursButtonMedia ${selectedId === movie.id ? "active" : ""}`}
               type="button"
               onClick={() => clicked(movie)}
             >
               18h30
             </button>
             <button
-              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              className={`hoursButtonMedia ${selectedId === movie.id ? "active" : ""}`}
               type="button"
               onClick={() => clicked(movie)}
             >
               20h00
             </button>
             <button
-              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              className={`hoursButtonMedia ${selectedId === movie.id ? "active" : ""}`}
               type="button"
               onClick={() => clicked(movie)}
             >

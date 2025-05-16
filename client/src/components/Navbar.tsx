@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../assets/styles/Navbar.css";
-import { Search, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import logo from "../assets/images/cinesphere-logo-simple_1.png";
 import type { RootState } from "../store";
 import { shoppingCartActions } from "../store/shopping-cart-slice";
@@ -68,9 +68,7 @@ const Navbar = () => {
 
           {/*Icons de la loupe et du panier */}
           <div className="navbar-icons">
-            <Search className="icon" onClick={() => setShowModal(true)} />
-
-            <Link to="/panier">
+            <Link to="/404">
               <button
                 type="button"
                 className="btn-panier"
