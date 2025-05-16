@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import BannerOffer from "../components/BannerOffer";
 import { shoppingCartActions } from "../store/shopping-cart-slice";
+import HeaderBanner from "../components/HeaderBanner";
+import HeaderButton from "../components/HeaderButton";
 
 type Movie = {
   id: number;
@@ -51,6 +53,9 @@ function Evenements() {
   return (
     <>
       <div className="evenement">
+      <div className="">
+        <HeaderBanner />
+        <HeaderButton />
         <h2>AVANT PREMIERES</h2>
         <div className="movie">
           {movies.slice(0, 4).map((movie) => (
