@@ -67,6 +67,7 @@
 
 /*fond jaune h3 */
 .h3Movies {
+  margin-top: 1em;
   font-family: sans-serif;
   width: fit-content;
 
@@ -134,6 +135,10 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.tilteDistribution {
+  margin-bottom: 1em;
 }
 
 .swiperCasting {

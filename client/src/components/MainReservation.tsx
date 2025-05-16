@@ -105,14 +105,14 @@ function MainReservation() {
             </button>
           </div>
         </div>
-      </div>
-      <div className="distributionContaint">
         <div className="caddiesReservation">
           <button className="caddiesButton" type="button">
             Ajouter au panier
           </button>
         </div>
-        <h4>Distribution :</h4>
+      </div>
+      <div className="distributionContaint">
+        <h3 className="tilteDistribution">Distribution :</h3>
         <Swiper
           className="swiperCasting"
           modules={[Navigation, Pagination]}

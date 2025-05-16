@@ -13,16 +13,22 @@ function MainTopCard({ title, poster_path, id }: Film) {
   const toggleLike = () => setLiked(!liked);
 
   return (
-    <div className="movieCard">
-      <img src={`https://image.tmdb.org/t/p/w200${poster_path}`} alt={title} />
-      <h1 className="titleMovie">
-        <button className="movieBtn" type="button" onClick={toggleLike}>
+    <div className="favoriteBlock">
+      <Link to={`/movie/${id}`}>
+        <img
+          className="roundedImage"
+          src={`https://image.tmdb.org/t/p/w200${poster_path}`}
+          alt={title}
+        />
+      </Link>
+      <h3 className="titleMovies">
+        <button className="buttonFavorite" type="button" onClick={toggleLike}>
           {liked ? "❤️" : "🤍"}
         </button>
         <Link to={`/movie/${id}`} className="movieLink">
           {title}
         </Link>
-      </h1>
+      </h3>
     </div>
   );
 }
