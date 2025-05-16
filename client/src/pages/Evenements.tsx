@@ -1,5 +1,7 @@
 import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { shoppingCartActions } from "../store/shopping-cart-slice";
 
 type Movie = {
   id: number;
@@ -33,13 +35,21 @@ function Evenements() {
       .catch((err) => console.error(err));
   }, []);
 
-  const clicked = (id: number) => {
-    setSelectedId(id);
+  const clicked = (movie: Movie) => {
+    setSelectedId(movie.id);
+
+    dispatch(
+      shoppingCartActions.addItemToCart({
+        id: movie.id.toString(),
+      }),
+    );
   };
+
+  const dispatch = useDispatch();
 
   return (
     <>
-      <div className="">
+      <div className="evenement">
         <h2>AVANT PREMIERES</h2>
         <div className="movie">
           {movies.slice(0, 4).map((movie) => (
@@ -54,7 +64,7 @@ function Evenements() {
                 <button
                   type="button"
                   className={`film-btn ${selectedId === movie.id ? "active" : ""}`}
-                  onClick={() => clicked(movie.id)}
+                  onClick={() => clicked(movie)}
                 >
                   20H00
                 </button>

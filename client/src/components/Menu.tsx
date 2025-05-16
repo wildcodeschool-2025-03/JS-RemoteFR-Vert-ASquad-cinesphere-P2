@@ -22,16 +22,16 @@ const Menu = ({ open, setOpen }: Props) => {
       {/*Les différentes pages*/}
       <ul className="liens">
         <Link to="/">
-          <li>Acceuil</li>
+          <li>ACCUEIL</li>
         </Link>
         <Link to="/evenements">
-          <li>Evenements</li>
+          <li>EVENEMENTS</li>
         </Link>
         <Link to="/selection">
-          <li>Selection</li>
+          <li>SELECTION</li>
         </Link>
         <Link to="/offres">
-          <li>Offres</li>
+          <li>OFFRES</li>
         </Link>
       </ul>
     </nav>

@@ -1,6 +1,9 @@
 import { Calendar } from "lucide-react";
 import type React from "react";
 import "../../assets/styles/SelectionMovieCard.css";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { shoppingCartActions } from "../../store/shopping-cart-slice";
 
 type Movie = {
   id: number;
@@ -21,12 +24,25 @@ const getImageUrl = (path: string | null): string => {
 
 const SelectionMovieCard: React.FC<SelectionMovieCardProps> = ({ movie }) => {
   const { title, poster_path, overview, release_date } = movie;
+  const [selectedId, setSelectedId] = useState<number | null>(null);
 
   const formattedDate = new Date(release_date).toLocaleDateString("fr-FR", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
+
+  const clicked = (movie: Movie) => {
+    setSelectedId(movie.id);
+
+    dispatch(
+      shoppingCartActions.addItemToCart({
+        id: movie.id.toString(),
+      }),
+    );
+  };
+
+  const dispatch = useDispatch();
 
   return (
     <div className="movie-cards">
@@ -43,7 +59,11 @@ const SelectionMovieCard: React.FC<SelectionMovieCardProps> = ({ movie }) => {
             <Calendar className="icon" />
             <span className="date-text">{formattedDate}</span>
           </div>
-          <button type="button" className="reservation-button">
+          <button
+            type="button"
+            className={`reservation-button ${selectedId === movie.id ? "active" : ""}`}
+            onClick={() => clicked(movie)}
+          >
             Réservez
           </button>
         </div>

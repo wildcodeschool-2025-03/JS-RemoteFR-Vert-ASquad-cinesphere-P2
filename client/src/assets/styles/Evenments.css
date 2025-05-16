@@ -18,13 +18,19 @@
   text-align: center;
 }
 
-.main h2 {
-  font-size: 1.5rem;
-  display: inline-block;
-  padding: 10px 10px;
+.evenement h2 {
+  background-color: #ffcc00;
+  color: black;
   text-align: center;
-  margin: 30px auto;
   font-weight: bold;
+  padding: 8px 20px;
+  display: block;
+  font-size: 35px;
+  margin: 0 auto 30px;
+  margin-top: 30px;
+  text-transform: uppercase;
+  width: fit-content;
+  border-radius: 8px;
 }
 
 .movie {
@@ -43,7 +49,13 @@
   padding: 1rem;
   margin: 1rem auto;
   border-radius: 12px;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 12);
+}
+
+.film-affiche:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .film-affiche img {
@@ -78,6 +90,8 @@
 .film-btn {
   background-color: white;
   color: black;
+  padding: 8px 16px;
+  border-style: none;
   margin-top: 0.5rem;
   border-radius: 20px;
   font-weight: bold;
@@ -91,10 +105,15 @@
 }
 
 @media screen and (max-width: 768px) {
+  .evenement h2 {
+    font-size: 25px;
+  }
+
   .film-affiche {
-    display: flex;
+    width: 48%;
     flex-direction: column;
     align-items: center;
+    padding: 0.5rem;
   }
 
   .film-affiche img {
