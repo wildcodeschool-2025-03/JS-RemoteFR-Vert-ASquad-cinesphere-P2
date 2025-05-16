@@ -1,0 +1,57 @@
+.header-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    to right,
+    #c00f0c 0%,
+    #ad1913 51%,
+    #c00f0c 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: calc(100% - 32px);
+  white-space: nowrap;
+}
+
+.header-button:hover {
+  background-position: right center;
+  transform: translate(-50%, -50%) translateY(-0.25em);
+  box-shadow: 0 10px 9px -3px rgba(96, 0, 0, 0.38);
+}
+
+.header-button:active {
+  transform: translate(-50%, -50%);
+  box-shadow: unset;
+  background-color: #800b08;
+}
+
+@media screen and (max-width: 375px) {
+  .header-button {
+    top: 35%;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-button {
+    padding: 10px 20px;
+    font-size: 25px;
+    top: 49%;
+    left: 50;
+  }
+}

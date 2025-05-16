@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.cardBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3em;
+}
+
+.favoriteBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieCard {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.movieCard img {
+  width: 10em;
+  height: 15em;
+  object-fit: cover;
+}
+
+.titleMovie {
+  padding: 1em 0em;
+  font-size: 15px;
+  width: 18em;
+  height: 2em;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.titleSortiesRecentes {
+  border-radius: 8px;
+}
+
+.movieLink {
+  text-decoration: none;
+}
+
+.movieLink:hover {
+  text-decoration: none;
+}
+
+.affiche {
+  color: black;
+  background-color: #ffc219;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: none !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: grey !important;
+}
+
+.movieBtn {
+  all: unset;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.swiper.swiper-initialized.swiper-horizontal {
+  margin-left: 5px;
+  margin-right: 5px;
+}
