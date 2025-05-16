@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../assets/styles/Navbar.css";
 import { Search, ShoppingCart } from "lucide-react";
 import logo from "../assets/images/cinesphere-logo-simple_1.png";
+import type { RootState } from "../store";
+import { shoppingCartActions } from "../store/shopping-cart-slice";
 import Burger from "./Burger";
 import Menu from "./Menu";
 
@@ -12,6 +15,20 @@ const Navbar = () => {
 
   // Afficher ou cacher le menu burger
   const [open, setOpen] = useState(false);
+
+  const cartLength = useSelector(
+    (state: RootState) => state.shoppingCart.items.length,
+  );
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(
+      shoppingCartActions.addItemToCart({
+        id: "teste",
+      }),
+    );
+  };
 
   return (
     <>
@@ -36,24 +53,32 @@ const Navbar = () => {
         <div className={`navbar-pages ${open ? "active" : ""}`}>
           <ul>
             <Link to="/">
-              <li>Accueil</li>
+              <li>ACCUEIL</li>
             </Link>
             <Link to="/evenements">
-              <li>Événements</li>
+              <li>EVENEMENTS</li>
             </Link>
             <Link to="/selection">
-              <li>Sélection</li>
+              <li>SELECTION</li>
             </Link>
             <Link to="/offres">
-              <li>Offres</li>
+              <li>OFFRES</li>
             </Link>
           </ul>
 
           {/*Icons de la loupe et du panier */}
           <div className="navbar-icons">
             <Search className="icon" onClick={() => setShowModal(true)} />
-            <Link to="/Error404">
-              <ShoppingCart className="icon" />
+
+            <Link to="/panier">
+              <button
+                type="button"
+                className="btn-panier"
+                onClick={handleClick}
+              >
+                <ShoppingCart className="icon" /> ({cartLength}{" "}
+                {cartLength === 1 ? "" : ""})
+              </button>
             </Link>
           </div>
         </div>

@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useDispatch } from "react-redux";
 import { Navigation, Pagination } from "swiper/modules";
+import { shoppingCartActions } from "../store/shopping-cart-slice";
 
 interface Credit {
   id: number;
@@ -34,6 +36,18 @@ function MainReservation() {
   const apiImage = "https://image.tmdb.org/t/p/w300";
   const token = import.meta.env.VITE_TOKEN_API;
   const { id } = useParams();
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const clicked = (movie: Movie) => {
+    setSelectedId(movie.id);
+
+    dispatch(
+      shoppingCartActions.addItemToCart({
+        id: movie.id.toString(),
+      }),
+    );
+  };
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!id) return;
@@ -84,29 +98,57 @@ function MainReservation() {
           <p className="overviewReservation">{movie.overview}</p>
 
           <div className="hoursReservation">
-            <button className="hoursButton" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               14h00
             </button>
-            <button className="hoursButton" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               15h30
             </button>
-            <button className="hoursButton" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               17h00
             </button>
 
-            <button className="hoursButtonMedia" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               18h30
             </button>
-            <button className="hoursButtonMedia" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               20h00
             </button>
-            <button className="hoursButtonMedia" type="button">
+            <button
+              className={`hoursButton ${selectedId === movie.id ? "active" : ""}`}
+              type="button"
+              onClick={() => clicked(movie)}
+            >
               21h30
             </button>
           </div>
         </div>
         <div className="caddiesReservation">
-          <button className="caddiesButton" type="button">
+          <button
+            className={`caddiesButton ${selectedId === movie.id ? "active" : ""}`}
+            type="button"
+            onClick={() => clicked(movie)}
+          >
             Ajouter au panier
           </button>
         </div>
