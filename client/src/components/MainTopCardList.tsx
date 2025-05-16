@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../assets/styles/UpComing.css";
+
 type Movie = {
   id: number;
   title: string;
