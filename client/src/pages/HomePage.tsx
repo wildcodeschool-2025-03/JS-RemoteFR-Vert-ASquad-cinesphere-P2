@@ -1,3 +1,4 @@
+import BannerOffer from "../components/BannerOffer";
 import HeaderBanner from "../components/HeaderBanner";
 import HeaderButton from "../components/HeaderButton";
 import MainBottom from "../components/MainBottom";
@@ -10,6 +11,7 @@ function HomePage() {
       <HeaderButton />
       <MainTopCardList />
       <MainBottom />
+      <BannerOffer />
     </div>
   );
 }
