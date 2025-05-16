@@ -1,6 +1,7 @@
 import "../assets/styles/Evenments.css";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import BannerOffer from "../components/BannerOffer";
 import { shoppingCartActions } from "../store/shopping-cart-slice";
 
 type Movie = {
@@ -73,6 +74,7 @@ function Evenements() {
           ))}
         </div>
       </div>
+      <BannerOffer />
     </>
   );
 }

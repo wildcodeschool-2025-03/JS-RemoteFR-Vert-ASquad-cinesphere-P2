@@ -67,6 +67,7 @@
 
 /*fond jaune h3 */
 .h3Movies {
+  margin-top: 1em;
   font-family: sans-serif;
   width: fit-content;
 
@@ -136,6 +137,10 @@
   }
 }
 
+.tilteDistribution {
+  margin-bottom: 1em;
+}
+
 .swiperCasting {
   width: 15em;
   margin-bottom: 1em;
@@ -174,15 +179,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 27%;
+    width: 23%;
   }
 
   @media (min-width: 1024px) and (max-width: 1280px) {
     width: 20%;
   }
 
-  @media (min-width: 1280px) and (max-width: 2000px) {
-    width: 16%;
+  @media (min-width: 1200px) and (max-width: 2000px) {
+    width: 17%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

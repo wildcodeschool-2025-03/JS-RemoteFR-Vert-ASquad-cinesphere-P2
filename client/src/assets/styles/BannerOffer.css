@@ -18,25 +18,21 @@
   padding-top: 1em;
 }
 
-img {
-  width: 18em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.offerTitle {
+.title1BanOffer {
   font-size: 20px;
   margin-bottom: 1em;
-  background-color: none;
+  background: none;
   color: black;
 }
 
-.offersubTtitle {
+.title2BanOffer {
   font-size: 15px;
   font-weight: 400;
+  background: none;
+  color: black;
 }
 
-.offerBtn {
+.btnSelection {
   background-color: #c00f0c;
   color: white;
   border: none;
@@ -44,13 +40,25 @@ img {
   padding: 8px 16px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 1em;
+
+  & :hover {
+    background-color: #a00d0a;
+  }
+
+  &:active {
+    background-color: #800b08;
+    transform: translateY(1px);
+  }
 }
 
-.offerBtn:hover {
-  background-color: #a00d0a;
+.blocImgBanner {
+  display: flex;
+  border-radius: 8px;
+  margin-top: 1em;
+  background: none;
 }
 
-.offerBtn:active {
-  background-color: #800b08;
-  transform: translateY(1px);
+.imgBanner {
+  width: 8rem;
 }

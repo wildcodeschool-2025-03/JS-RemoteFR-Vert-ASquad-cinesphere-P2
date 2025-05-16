@@ -5,27 +5,27 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 import { Navigation, Pagination } from "swiper/modules";
+import "../assets/styles/UpComing.css";
 
 interface movie {
   id: number;
   title: string;
   poster_path: string;
-  overwiew: string;
+  overview: string;
 }
 
 function MoviesList() {
   const [movies, setMovies] = useState<movie[]>([]);
   const apiImage = "https://image.tmdb.org/t/p/w200";
   const token = import.meta.env.VITE_TOKEN_API;
-  const [liked, setLiked] = useState(false);
-  const toggleLike = () => setLiked(!liked);
+  const [likes, setLikes] = useState<number[]>([]);
 
   useEffect(() => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: `Bearer ${token}`, // ← CORRECT ici
+        Authorization: `Bearer ${token}`,
       },
     };
 
@@ -37,9 +37,17 @@ function MoviesList() {
       .catch((err) => console.error(err));
   }, []);
 
+  const toggleLike = (id: number) => {
+    if (likes.includes(id)) {
+      setLikes(likes.filter((likedId) => likedId !== id));
+    } else {
+      setLikes([...likes, id]);
+    }
+  };
+
   return (
     <div className="upcomingBloc">
-      <h2 className="titleSortiesRecentes"> SORTIES RÉCENTES</h2>{" "}
+      <h2 className="titleSortiesRecentes"> SORTIES RÉCENTES</h2>
       <Swiper
         className="swiperHome"
         modules={[Navigation, Pagination]}
@@ -54,24 +62,24 @@ function MoviesList() {
       >
         {movies.map((movie) => (
           <SwiperSlide className="swipperSlideHome" key={movie.id}>
-            <img
-              src={`${apiImage}${movie.poster_path}`}
-              alt={movie.title}
-              className="roundedImage"
-            />
-
+            <Link to={`/movie/${movie.id}`}>
+              <img
+                src={`${apiImage}${movie.poster_path}`}
+                alt={movie.title}
+                className="roundedImage"
+              />
+            </Link>
             <div className="favoriteBlock">
               <h3 className="titleMovies">
                 <button
                   className="buttonFavorite"
                   type="button"
-                  onClick={toggleLike}
+                  onClick={() => toggleLike(movie.id)}
                 >
-                  {liked ? "❤️" : "🤍"}
+                  {likes.includes(movie.id) ? "❤️" : "🤍"}
                 </button>
                 <Link className="movieLink" to={`/movie/${movie.id}`}>
                   {movie.title}
-                  {movie.overwiew}
                 </Link>
               </h3>
             </div>

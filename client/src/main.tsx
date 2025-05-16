@@ -11,6 +11,7 @@ import store from "./store";
 // Import the main app component
 
 import App from "./App";
+import ErrorPage from "./pages/ErrorPage";
 import Evenements from "./pages/Evenements";
 import HomePage from "./pages/HomePage";
 import Panier from "./pages/Panier";
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
         path: "",
         element: <HomePage />, // Renders the App component for the home page
       },
+
       {
         path: "/Reservation",
         element: <ReservationPage />,
@@ -68,10 +70,13 @@ const router = createBrowserRouter([
         path: "/movie/:id",
         element: <ReservationPage />,
       },
-
       {
-        path: "/video/:id",
+        path: "/Film/:id",
         element: <ReservationPage />,
+      },
+      {
+        path: "/Error404",
+        element: <ErrorPage />,
       },
     ], // Renders the App component for the home page
   },

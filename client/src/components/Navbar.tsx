@@ -43,9 +43,11 @@ const Navbar = () => {
         </div>
 
         {/*Logo du site*/}
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
+        <Link to="/">
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
+        </Link>
 
         {/*Les différentes pages*/}
         <div className={`navbar-pages ${open ? "active" : ""}`}>
@@ -67,6 +69,7 @@ const Navbar = () => {
           {/*Icons de la loupe et du panier */}
           <div className="navbar-icons">
             <Search className="icon" onClick={() => setShowModal(true)} />
+
             <Link to="/panier">
               <button
                 type="button"

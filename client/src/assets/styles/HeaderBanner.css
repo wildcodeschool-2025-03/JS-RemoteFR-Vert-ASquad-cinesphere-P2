@@ -13,14 +13,36 @@
 
 .banner-title {
   position: absolute;
-  top: -30%;
   left: 50%;
-  transform: translateX(-50%);
-  max-width: 80%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
   height: auto;
   z-index: 2;
 }
 
+@media screen and (max-width: 375px) {
+  .banner-img {
+    height: 20vh;
+  }
+
+  .banner-title {
+    max-width: 60%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .banner-img {
+    height: 22vh;
+  }
+
+  .banner-title {
+    min-width: 90%;
+    right: 50%;
+  }
+}
+
+/* Desktop */
 @media screen and (min-width: 768px) {
   .banner-img {
     height: 50vh;
