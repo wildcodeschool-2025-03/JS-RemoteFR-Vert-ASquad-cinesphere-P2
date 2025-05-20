@@ -1,0 +1,288 @@
+.footer {
+  background-color: #0f0f0f;
+  padding: 2rem 0 1.5rem;
+  width: 100%;
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+}
+
+.footer-brand {
+  flex-basis: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin-bottom: 1.25rem;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.footer-nav {
+  display: none;
+}
+
+.nav-title {
+  color: #e5e7eb;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.nav-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 2px;
+  background-color: #ffc219;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 0.75rem;
+}
+
+.nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ffc219;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.legal-link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+  color: #d1d5db;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.social-link:active .social-icon {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Tablet*/
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .footer-container {
+    padding: 0 1.25rem;
+  }
+
+  .footer-brand {
+    max-width: 320px;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .footer-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .nav-title::after {
+    left: 0;
+    transform: none;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-nav {
+    display: none;
+    flex: 1 1 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-container {
+    max-width: 1800px;
+    padding: 0 1.5rem;
+  }
+
+  .footer-main {
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-brand {
+    flex: 1 1 250px;
+    max-width: none;
+    margin: 0;
+  }
+
+  .social-links {
+    padding-left: 15%;
+    justify-content: flex-start;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-nav {
+    flex: 1 1 160px;
+    margin-bottom: 0;
+  }
+
+  .nav-title {
+    font-size: 1.125rem;
+  }
+
+  .footer-nav {
+    display: block;
+  }
+
+  .legal-links {
+    max-width: 1800px;
+  }
+}

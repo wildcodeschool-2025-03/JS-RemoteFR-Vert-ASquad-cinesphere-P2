@@ -1,0 +1,282 @@
+/* Bloc de la page réservation */
+.movieBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Image de fond */
+.backGroundBloc {
+  @media (min-width: 1024px) {
+    height: 143%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.2;
+  }
+}
+
+/* Bloc des contenus des films */
+.moviesContent {
+  @media (min-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Breakpoint  */
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    background-color: transparent;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  margin-top: 5em;
+}
+
+/*Image du film */
+.movieImage {
+  width: fit-content;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1em;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/*fond jaune h3 */
+.h3Movies {
+  margin-top: 1em;
+  font-family: sans-serif;
+  width: fit-content;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    background-color: #ffc219;
+    padding: 4px 8px;
+    display: inline-block;
+    width: fit-content;
+    color: black;
+    font-size: medium;
+  }
+
+  @media (min-width: 992px) {
+    color: black;
+    background-color: #ffc219;
+    width: fit-content;
+  }
+}
+
+/* Bloc synopsis et des horaires */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 94%;
+  background: none;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* synopsis */
+.overviewReservation {
+  color: white;
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: none;
+  font-family: sans-serif;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+}
+
+.distributionContaint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.tilteDistribution {
+  margin-bottom: 1em;
+}
+
+.swiperCasting {
+  width: 15em;
+  margin-bottom: 1em;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) {
+    width: 45em;
+  }
+
+  @media (min-width: 992px) {
+    width: 70em;
+    background: none;
+  }
+}
+
+.swiper-wrapper {
+  @media (min-width: 992px) {
+    background: none;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+/* Bloc boutons des heures des séances */
+.hoursReservation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+  background: none;
+
+  /* Breakpoint  */
+  @media (min-width: 768px) and (max-width: 1080px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 23%;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    width: 20%;
+  }
+
+  @media (min-width: 1200px) and (max-width: 2000px) {
+    width: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* boutons des heures des séances */
+.hoursButton,
+.hoursButtonMedia {
+  background-color: white;
+  border: solid white;
+  text-shadow: none;
+  text-align: center;
+  border-radius: 7px;
+  padding: 10px 12px;
+  margin: 10px 4px;
+  color: black;
+
+  &:hover {
+    background-color: #ffc219;
+    border: #ffc219;
+  }
+}
+
+/* boutons des heures des séances à partir du format tablette et Survol */
+.hoursButtonMedia {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: unset;
+  }
+}
+
+.caddiesReservation {
+  background: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* bouton ajouter au panier */
+.caddiesButton {
+  background-color: red;
+  border-radius: 15px;
+  padding: 7px 45px;
+  margin: 10px 4px 20px;
+
+  @media (min-width: 768px) {
+    padding: 10px 80px;
+  }
+}
+
+/* titre "Date de sorties */
+.dateRelease {
+  margin-top: 1em;
+
+  @media (min-width: 1024px) {
+    background-color: transparent;
+  }
+}
+
+/* Carousselle des acteurs */
+
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.castItem {
+  width: 120px;
+  text-align: center;
+  font-size: 0.9rem;
+  background: none;
+}
+
+.castImage {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.castName {
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+}
+
+.castCharacter {
+  font-style: italic;
+  color: #ccc;
+  margin: 0;
+}

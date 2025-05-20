@@ -1,0 +1,30 @@
+/* Cacher le burger sur l'ecran desktop*/
+.burger {
+  display: none;
+}
+
+/* Afficher et styliser le burger sur tablette et mobile*/
+@media screen and (max-width: 992px) {
+  /* Style du bouton burger*/
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+  }
+
+  /* Style des 3 barre du burger*/
+  .burger span {
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+}
